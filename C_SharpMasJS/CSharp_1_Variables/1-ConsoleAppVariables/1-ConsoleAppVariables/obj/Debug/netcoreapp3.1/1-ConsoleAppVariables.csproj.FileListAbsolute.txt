@@ -1,0 +1,11 @@
+C:\Users\formacio\Documents\git-exercici\C_SharpMasJS\CSharp_1_Variables\1-ConsoleAppVariables\1-ConsoleAppVariables\bin\Debug\netcoreapp3.1\1-ConsoleAppVariables.exe
+C:\Users\formacio\Documents\git-exercici\C_SharpMasJS\CSharp_1_Variables\1-ConsoleAppVariables\1-ConsoleAppVariables\bin\Debug\netcoreapp3.1\1-ConsoleAppVariables.deps.json
+C:\Users\formacio\Documents\git-exercici\C_SharpMasJS\CSharp_1_Variables\1-ConsoleAppVariables\1-ConsoleAppVariables\bin\Debug\netcoreapp3.1\1-ConsoleAppVariables.runtimeconfig.json
+C:\Users\formacio\Documents\git-exercici\C_SharpMasJS\CSharp_1_Variables\1-ConsoleAppVariables\1-ConsoleAppVariables\bin\Debug\netcoreapp3.1\1-ConsoleAppVariables.runtimeconfig.dev.json
+C:\Users\formacio\Documents\git-exercici\C_SharpMasJS\CSharp_1_Variables\1-ConsoleAppVariables\1-ConsoleAppVariables\bin\Debug\netcoreapp3.1\1-ConsoleAppVariables.dll
+C:\Users\formacio\Documents\git-exercici\C_SharpMasJS\CSharp_1_Variables\1-ConsoleAppVariables\1-ConsoleAppVariables\bin\Debug\netcoreapp3.1\1-ConsoleAppVariables.pdb
+C:\Users\formacio\Documents\git-exercici\C_SharpMasJS\CSharp_1_Variables\1-ConsoleAppVariables\1-ConsoleAppVariables\obj\Debug\netcoreapp3.1\1-ConsoleAppVariables.csprojAssemblyReference.cache
+C:\Users\formacio\Documents\git-exercici\C_SharpMasJS\CSharp_1_Variables\1-ConsoleAppVariables\1-ConsoleAppVariables\obj\Debug\netcoreapp3.1\1-ConsoleAppVariables.AssemblyInfoInputs.cache
+C:\Users\formacio\Documents\git-exercici\C_SharpMasJS\CSharp_1_Variables\1-ConsoleAppVariables\1-ConsoleAppVariables\obj\Debug\netcoreapp3.1\1-ConsoleAppVariables.AssemblyInfo.cs
+C:\Users\formacio\Documents\git-exercici\C_SharpMasJS\CSharp_1_Variables\1-ConsoleAppVariables\1-ConsoleAppVariables\obj\Debug\netcoreapp3.1\1-ConsoleAppVariables.dll
+C:\Users\formacio\Documents\git-exercici\C_SharpMasJS\CSharp_1_Variables\1-ConsoleAppVariables\1-ConsoleAppVariables\obj\Debug\netcoreapp3.1\1-ConsoleAppVariables.pdb
