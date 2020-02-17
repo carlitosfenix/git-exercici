@@ -12,7 +12,17 @@ primeraVariables ();
 
 operadores();
 
+arrays();
 
+
+}
+
+function arrays(){
+    var miArray = Array();
+    miArray.push("primero un string");
+    miArray.push(2);
+    var suma = 2+miArray[1]
+    console.log("miArray[0]="+miArray[0]+", "+"Segunda pos +=2"+suma+" ,se ha guardado como string, por la primera asignación");
 }
 
 function operadores (){

@@ -13,21 +13,35 @@ namespace _1_ConsoleAppVariables
 
             // Console.ReadKey();
 
-            variablesPorAsignacion();
-            variablesTipadas();
-            parseEntradaNumero();
-            operadores();
-            sayHello();
+            RegistroAlumnos Miregistro = new RegistroAlumnos();
+            Miregistro.RegistrarAlumnos();
+
+
+            VariablesPorAsignacion();
+            VariablesTipadas();
+            ParseEntradaNumero();
+            Operadores();
+            SayHello();
             var resultado = Suma(45,20);
             Console.WriteLine($"El resultado del método suma es: {resultado}");
+            Console.WriteLine(arrays());
+            
+        }
 
-
-
-
+        private static double arrays()
+        {
+            //Arrays en C# se pueden declarar como var directamente sin [] 
+            var miArray = new int[20];
+            miArray[0] = 3;
+            miArray[1] = 7;
+            int[] miArray2 = new int[1];
+            return miArray[0]+miArray[1];
+          
         }
 
 
-        public static void operadores() {
+        public static void Operadores()
+        {
             /*Veamos que podemos hacer lo mismo que en java*/
 
             int intOne = 1;
@@ -44,7 +58,8 @@ namespace _1_ConsoleAppVariables
 
         }
 
-        public static void sayHello() {
+        public static void SayHello() 
+        {
             var textOut = "Hello";
             Console.WriteLine("Saludo" + textOut);
             Console.WriteLine($"Saludo-2: {textOut}");
@@ -52,13 +67,15 @@ namespace _1_ConsoleAppVariables
 
         }
 
-        public static int Suma(int a, int b){
+        public static int Suma(int a, int b)
+        {
 
             return a+b;
         }
 
         
-    public static void variablesPorAsignacion(){
+    public static void VariablesPorAsignacion()
+    {
         var entero = 23;
         var decimales = 45.5m;//sufijo m para tipo decimal
         var doble=0.5d;
@@ -69,7 +86,8 @@ namespace _1_ConsoleAppVariables
         Console.WriteLine("Variables por asignacion: "+entero+", "+decimales+", "+fechaTiempo+", "+doble+", "+texto+", "+caracter+", "+siOno );  
     }
 
-    public static void variablesTipadas(){
+    public static void VariablesTipadas()
+    {
         int entero =23;
         decimal decimales = 45.5m;
         double doble=0.5d;
@@ -81,7 +99,8 @@ namespace _1_ConsoleAppVariables
         Console.WriteLine("Variables tipadas: "+entero+", "+decimales+", "+fechaTiempo2+", "+doble+", "+texto+", "+caracter+", "+siOno );
     }
 
-        public static void parseEntradaNumero() {
+        public static void ParseEntradaNumero()
+        {
 
             Console.WriteLine("Entra un número");
             var entrada = Console.ReadLine();
