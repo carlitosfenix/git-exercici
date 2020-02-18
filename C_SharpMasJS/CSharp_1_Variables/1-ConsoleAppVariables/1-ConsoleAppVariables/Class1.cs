@@ -17,6 +17,8 @@ namespace _1_ConsoleAppVariables
                 Console.WriteLine($"Por favor, entra la nota del alumno....{miList.Count + 1}");
                 entradaUser = Console.ReadLine();
                 var notaAsignada = 0.0;
+                //Si usamos , la sustituimos
+                entradaUser.Replace(",",".");
                 if (Double.TryParse(entradaUser, out notaAsignada))
                 {
                     miList.Add(notaAsignada);
@@ -43,13 +45,18 @@ namespace _1_ConsoleAppVariables
             }
 
             notaMedia = sumaTotal / (miList.Count + 1);
+            //Ordenamos con lo que el primero de la lista será el menor
             miList.Sort();
-            notaMin = miList[miList.Count + 1];
-            notaMax = miList
+            notaMin = miList[0];
+            notaMax = miList[miList.Count-1];
 
-}
+            Console.WriteLine($"Med: {notaMedia} Min: {notaMin} Max: {notaMax}");
+           
 
         }
 
     }
+
 }
+
+
