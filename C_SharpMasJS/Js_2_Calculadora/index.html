@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="Calculadora">
@@ -8,17 +9,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora</title>
     <script src="js/calculadora.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/style.css"/>
-   
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+
 </head>
+
 <body onload="inicio();">
 
-    <h1>CALCULADORA</h1>
-    <div id="entrada">
-        <input id="txtNum1" type="text"/>
-        <input id="txtNum1" type="text"/>
-        <input id="btnSum"  type="button" value="suma"/>
+
+    <div class="container">
+        <header class="center-me ">
+            <h1 >CALCULADORA</h1>
+        </header>
+        <aside class="flex-center-vertically  center-me">
+            <div id="teclado">
+                <input id="btnSuma" type="button" value="Suma" onclick="suma();" />
+                <input id="btnResta" type="button" value="Resta" onclick="resta();" />
+                <input id="btnProducto" type="button" value="Producto" onclick="producto();" />
+                <input id="btnDivision" type="button" value="Division" onclick="division();" />
+            </div>
+        </aside>
+        <main class="flex-center-vertically center-me">
+            <div id="entrada" >
+                <input id="txtNum1" type="text" />
+                <input id="txtNum2" type="text" />
+            </div>
+        </main>
+        <footer class="center-me ">
+            <div id="salida">
+        </footer>
     </div>
-    
+
+
+
+
+
+    </div>
+
 </body>
+
 </html>

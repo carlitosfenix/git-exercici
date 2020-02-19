@@ -1,1 +1,36 @@
 body{background-color: rgb(45, 126, 129);}
+
+
+.container {
+    display: grid;   
+    flex-direction: row; 
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 50px 350px 50px;
+}
+
+
+.flex-center-vertically {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 400px;
+  }
+
+
+  .center-me {
+    margin: 0 auto;
+  }
+
+header {
+    grid-column: span 12;
+}aside {
+    grid-column: span 2;
+}main {
+    grid-column: span 10;
+}footer {
+    grid-column: span 12;
+}
+
+header{
+    display: flex;
+}

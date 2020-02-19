@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "CalculadoraWpfApp1/1.0.0": {
+        "runtime": {
+          "CalculadoraWpfApp1.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CalculadoraWpfApp1/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

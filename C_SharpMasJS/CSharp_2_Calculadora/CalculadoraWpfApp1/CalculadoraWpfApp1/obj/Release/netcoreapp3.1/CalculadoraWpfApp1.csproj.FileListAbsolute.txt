@@ -1,0 +1,16 @@
+C:\Users\formacio\Documents\git-exercici\C_SharpMasJS\CSharp_2_Calculadora\CalculadoraWpfApp1\CalculadoraWpfApp1\bin\Release\netcoreapp3.1\CalculadoraWpfApp1.exe
+C:\Users\formacio\Documents\git-exercici\C_SharpMasJS\CSharp_2_Calculadora\CalculadoraWpfApp1\CalculadoraWpfApp1\bin\Release\netcoreapp3.1\CalculadoraWpfApp1.deps.json
+C:\Users\formacio\Documents\git-exercici\C_SharpMasJS\CSharp_2_Calculadora\CalculadoraWpfApp1\CalculadoraWpfApp1\bin\Release\netcoreapp3.1\CalculadoraWpfApp1.runtimeconfig.json
+C:\Users\formacio\Documents\git-exercici\C_SharpMasJS\CSharp_2_Calculadora\CalculadoraWpfApp1\CalculadoraWpfApp1\bin\Release\netcoreapp3.1\CalculadoraWpfApp1.runtimeconfig.dev.json
+C:\Users\formacio\Documents\git-exercici\C_SharpMasJS\CSharp_2_Calculadora\CalculadoraWpfApp1\CalculadoraWpfApp1\bin\Release\netcoreapp3.1\CalculadoraWpfApp1.dll
+C:\Users\formacio\Documents\git-exercici\C_SharpMasJS\CSharp_2_Calculadora\CalculadoraWpfApp1\CalculadoraWpfApp1\bin\Release\netcoreapp3.1\CalculadoraWpfApp1.pdb
+C:\Users\formacio\Documents\git-exercici\C_SharpMasJS\CSharp_2_Calculadora\CalculadoraWpfApp1\CalculadoraWpfApp1\obj\Release\netcoreapp3.1\MainWindow.g.cs
+C:\Users\formacio\Documents\git-exercici\C_SharpMasJS\CSharp_2_Calculadora\CalculadoraWpfApp1\CalculadoraWpfApp1\obj\Release\netcoreapp3.1\App.g.cs
+C:\Users\formacio\Documents\git-exercici\C_SharpMasJS\CSharp_2_Calculadora\CalculadoraWpfApp1\CalculadoraWpfApp1\obj\Release\netcoreapp3.1\CalculadoraWpfApp1_MarkupCompile.cache
+C:\Users\formacio\Documents\git-exercici\C_SharpMasJS\CSharp_2_Calculadora\CalculadoraWpfApp1\CalculadoraWpfApp1\obj\Release\netcoreapp3.1\CalculadoraWpfApp1_MarkupCompile.lref
+C:\Users\formacio\Documents\git-exercici\C_SharpMasJS\CSharp_2_Calculadora\CalculadoraWpfApp1\CalculadoraWpfApp1\obj\Release\netcoreapp3.1\MainWindow.baml
+C:\Users\formacio\Documents\git-exercici\C_SharpMasJS\CSharp_2_Calculadora\CalculadoraWpfApp1\CalculadoraWpfApp1\obj\Release\netcoreapp3.1\CalculadoraWpfApp1.g.resources
+C:\Users\formacio\Documents\git-exercici\C_SharpMasJS\CSharp_2_Calculadora\CalculadoraWpfApp1\CalculadoraWpfApp1\obj\Release\netcoreapp3.1\CalculadoraWpfApp1.AssemblyInfoInputs.cache
+C:\Users\formacio\Documents\git-exercici\C_SharpMasJS\CSharp_2_Calculadora\CalculadoraWpfApp1\CalculadoraWpfApp1\obj\Release\netcoreapp3.1\CalculadoraWpfApp1.AssemblyInfo.cs
+C:\Users\formacio\Documents\git-exercici\C_SharpMasJS\CSharp_2_Calculadora\CalculadoraWpfApp1\CalculadoraWpfApp1\obj\Release\netcoreapp3.1\CalculadoraWpfApp1.dll
+C:\Users\formacio\Documents\git-exercici\C_SharpMasJS\CSharp_2_Calculadora\CalculadoraWpfApp1\CalculadoraWpfApp1\obj\Release\netcoreapp3.1\CalculadoraWpfApp1.pdb

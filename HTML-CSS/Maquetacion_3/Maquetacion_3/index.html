@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ES">
+<head>
+	<meta charset="utf-8">
+	<link href="./css/css-maquetacion.css" type="text/css" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans+Condensed:300|Roboto" rel="stylesheet"> 
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+	<!--Nav Bar -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<title>3 DIV dentro de un div padre</title>
+	<script>
+
+		window.onscroll = function() {scrollFunction()};
+
+		function scrollFunction() {
+  		if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    	document.getElementById("myBtn").style.display = "block";
+  			} else {
+    		document.getElementById("myBtn").style.display = "none";
+  			}
+		}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+</head>
+<body class="blancoRoto">
+
+	<header>
+		
+
+		<!-- Navbar on small screens (Hidden on medium and large screens) -->
+		<div class="w3-top " id="myNavbar"> <!--w3-hide-large w3-hide-medium -->
+		  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+		  	<h1>DEPORTE ES VIDA: APAGA Tele5 y Sal a VIVIR </h1>
+		    <a href="#" class="w3-bar-item w3-button" style="width:25% !important">Inicio</a>
+		    <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">Running</a>
+		    <a href="#photos" class="w3-bar-item w3-button" style="width:25% !important">Yoga</a>
+		    <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">Contactar</a>
+		  </div>
+		</div>
+	</header>
+
+	<div class="imgSobrePuesta" id="usain">
+		<img id="fotoUsain" src="./img/UsainBolt_ok.png" >
+	</div>
+
+	<div class="gradienteMagentaCss" id="conImgSaliente">
+		
+	</div>
+
+	
+
+	<div class="imgSobrePuesta" id="atletaFemenina">
+		
+	</div>
+
+	<div class="grisPer" id="abueloSuperior">
+		<div class="grisAzul" id="padreIzquierda">
+			<h2>Entrenamientos</h2>
+			<ul>
+				<li><p><i class="fab fa-accessible-icon"><br></i> Sprint de Alta Intensidad</p></li>
+				<li><p><i class="fas fa-clock"><br></i>Pirámides</p></li>
+				<li><p><i class="fas fa-car-side"><br></i>Explosión</p></li>
+				<li><p><i class="fas fa-carrot"><br></i>Sprint Alternado</p></li>
+				<li><p><i class="fas fa-running"><br></i>  Sprint Creciente</p></li>
+				<li><p><i class="fas fa-motorcycle"><br></i>Sprint Cruzado</p></li>
+			</ul>
+		</div>
+		<div class="grisAzul" id="padreDerecha">
+			<div id="hijoSuperior"><h2>Sobre tu futuro rendimiento</h2><p>Si sigues los entrenamientos personalizados conseguirás mejorar tu resistencia, tu velocidad y por tanto tus sensaciones a la hora de entrenar y/o competir.</p></div>
+			<div class="grisPer" id="hijoCentro">
+				<div class="salmonOscuro" id="pequeIzquierda"><img class ="boxshadow" src="./img/1_eluid.jpg"></div>
+				<div class="salmonClaro" id="pequeDerecha"><p>Nuestro maestro del 	
+&#127939; running y el yoga <b>Eliud Kipchoge</b> te guiará, pero <b>sólo si quieres dejar tu vida sedentaría que te está matando.</b></p> <p>Los beneficios de correr: Reduce el riesgo de contraer enfermedades; 
+    Mejora el sistema cardiorespiratorio; 
+    Fortalece los huesos;
+    Regenera la masa muscular;
+    Permite perder y controlar el peso;
+    Combate la celulitis;
+    Favorece el descanso; 
+    Ayuda a combatir el estrés y la ansiedad.</p></div>
+			</div>
+			<div id="hijoInferior"><p><b>No hay excusa para no mejorar tu vida</b>, si eres constante con nuestros programas podrás Practicar yoga con regularidad es una excelente forma de aliviar el estrés y las tensiones que acumulamos y que nos pasan factura tanto a nivel físico como mental. Hoy nos centraremos en los beneficios físicos que podemos conseguir: Mejora la respiración. El yoga enseña a respirar correctamente.</p></div>
+		</div>
+
+
+	</div>
+
+	<h2>Sobre tu equipo</h2>
+
+	<div class="magenta" id="papiEquipo">
+		<div class="verdeAzul" id="hijo_izquierda"><center>
+			<img class ="boxshadow" src="./img/1_eluid.jpg"></center>
+			<h3>Eliud Kipchoge</h3>
+			<p>El keniano Eliud Kipchoge quien, con 32 años, es el actual campeón olímpico de maratón, 2h 1m 28s y en pista cerrada 2h 25s.
+		En Octubre de 2019 competirá en el evento 1:59:59. </p></div>
+		<div class="verdeAzulOscuro" id="hijo_centro"><center><img src="./img/2_corredor.jpg"></center><h3>Lelisa Desisa</h3><p>El etíope Lelisa Desisa también compite por el 1:59:59</p></div>
+		<div class="magentaRosa" id="hijo_derecha"><center><img src="./img/3_corredor.jpg"></center><h3>Zersenay Tadese</h3><p>l Zersenay Tadese nacido Eritrea  asdlkadlkl aks ksdlk kaslkdlk askdk asldklaksdlk asldk</p></div>
+	</div>
+
+	<footer class="grisAzul">
+  		<address>
+    		<i class="fas fa-copyright"></i>  Amantes del deporte<br>
+    		correo: cambia.de.vida@elDeporteTeCurara.com
+  		</address>
+
+  	<p>1 de Mayo del 2019 <i id="myBtn" onclick="topFunction()" class="fas fa-rocket"></i></p>
+	</footer>
+	
+
+</body>
+</html>
