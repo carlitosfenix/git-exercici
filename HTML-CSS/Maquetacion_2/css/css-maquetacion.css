@@ -1,0 +1,99 @@
+body{
+	min-width: 280px;
+	padding: 10px;
+}
+
+h2{
+	margin-left: 10px;
+	font-family: 'Roboto', sans-serif;
+
+}
+
+h3{
+ 	font-family: 'Lato', sans-serif;
+ 	text-shadow: 3px 3px grey;	
+}
+
+p{
+	font-family: 'Open Sans Condensed', sans-serif;
+
+}
+
+#papi{
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	background-color: magenta;
+	padding: 10px;
+	border-radius: 15px;
+	box-shadow: 10px 10px grey;
+}
+
+
+img{
+	/*border-radius: 15px;
+	box-shadow: 3px 3px grey;*/
+	
+}
+
+.boxshadow {
+  position: relative;
+  -moz-box-shadow: 1px 2px 4px rgba(0, 0, 0,0.5);
+  -webkit-box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+  padding: 10px;
+  background: white;
+}
+
+/* Make the image fit the box */
+.boxshadow img {
+  width: 100%;
+  border: 1px solid #8a4419;
+  border-style: inset;
+}
+
+.boxshadow::after {
+  content: '';
+  position: absolute;
+  z-index: -1; /* hide shadow behind image */
+  -webkit-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.3);        
+  width: 70%; 
+  left: 15%; /* one half of the remaining 30% */
+  height: 100px;
+  bottom: 0;
+}
+
+
+#hijo_izquierda{
+	min-width: 250px;
+	width: 25%;
+	border-radius: 15px;
+	background-color: green;
+	padding: 10px;
+	color: white;
+	margin:10px 5px;
+	/*box-shadow: 10px 10px grey;*/
+}
+#hijo_centro{
+	min-width: 250px;
+	width: 25%;
+	border-radius: 15px;
+	background-color: green;
+	padding: 10px;
+	color: white;
+	margin:10px 5px;
+	box-shadow: 10px 10px grey;
+}
+#hijo_derecha{
+	min-width: 250px;
+	width: 25%;
+	border-radius: 15px;
+	background-color: green;
+	padding: 10px;
+	color: white;	
+	margin:10px 5px;	
+	box-shadow: 10px 10px grey;
+}

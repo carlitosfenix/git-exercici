@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8" />
+    <meta name="description" content="Ejercicio Switch-6 Fútbol">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta name="author" content="Carlos Acevedo">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio Switch-6 Fútbol</title>
+    <link rel="stylesheet" type="text/css" href="css/micss.css" />
+
+    <script src="js/miSwitch.js"></script>
+
+</head>
+
+<body onload="inicio();">
+
+    <h1>Ejercicio Switch-6 Fútbol</h1>
+    <br>
+    <br>
+    <h2>En que puesto juegas (Porter, defensa, migcampista o davanter) :</h2>
+
+    <div>
+        <label for="puesto">Tria la teva posició:</label>
+
+        <select id="puesto" onchange="selectPuesto(this.value);">
+            <option value="Porter">Porter</option>
+            <option value="Defensa">Defensa</option>
+            <option value="Migcampista">Migcampista</option>
+            <option value="Davanter">Davanter</option>
+        </select>
+    </div>
+    <div id="conceptos">
+        <label id="conceptoLb" for="cantidad">Concepto</label>
+        <input id="cantidad" type="text" value="0">
+
+
+
+    </div>
+    <div id="conceptos34">
+        <label id="conceptoLb2" for="cantidad">Concepto2</label>
+        <input id="cantidad2" type="text" value="0">
+    </div>
+    <div>
+        <input type="button" value="Valorar" onclick="valoracion();">
+    </div>
+
+    <div>
+        <br>
+        <br>
+        <div id="salida"></div>
+    </div>
+
+
+
+
+</body>
+
+</html>
