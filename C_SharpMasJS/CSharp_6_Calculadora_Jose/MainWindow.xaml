@@ -1,0 +1,55 @@
+﻿<Window x:Class="PropuestaCalculadora_Solucion.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PropuestaCalculadora_Solucion"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="650" Width="400">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+        </Grid.RowDefinitions>
+        
+        <Grid Grid.Row="0">
+            <TextBox x:Name="TbResult" Margin="5"></TextBox>
+        </Grid>
+
+        <Grid Grid.Row="1" Margin="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Button x:Name="BtPress7" Grid.Row="0" Grid.Column="0" Margin="5" Content="7" FontSize="25" Click="BtPress7_Click"></Button>
+
+            <Button x:Name="BtPress8" Grid.Row="0" Grid.Column="1" Margin="5" Content="8" FontSize="25" Click="BtPress8_Click"></Button>
+            <Button x:Name="BtPress9" Grid.Row="0" Grid.Column="2" Margin="5" Content="9" FontSize="25" Click="BtPress9_Click"></Button>
+
+            <Button x:Name="BtPress4" Grid.Row="1" Grid.Column="0" Margin="5" Content="4" FontSize="25" Click="BtPress4_Click"></Button>
+            <Button x:Name="BtPress5" Grid.Row="1" Grid.Column="1" Margin="5" Content="5" FontSize="25" Click="BtPress5_Click"></Button>
+            <Button x:Name="BtPress6" Grid.Row="1" Grid.Column="2" Margin="5" Content="6" FontSize="25" Click="BtPress6_Click"></Button>
+
+            <Button x:Name="BtPress1" Grid.Row="2" Grid.Column="0" Margin="5" Content="1" FontSize="25" Click="BtPress1_Click"></Button>
+            <Button x:Name="BtPress2" Grid.Row="2" Grid.Column="1" Margin="5,5,0,5" Content="2" FontSize="25" Click="BtPress2_Click"></Button>
+            <Button x:Name="BtPress3" Grid.Row="2" Grid.Column="2" Margin="5" Content="3" FontSize="25" Click="BtPress3_Click"></Button>
+
+            <Button x:Name="BtPressAdd" Grid.Row="3" Grid.Column="0" Margin="5" Content="+" FontSize="25" Click="BtPressAdd_Click"></Button>
+            <Button x:Name="BtPress0" Grid.Row="3" Grid.Column="1" Margin="5" Content="0" FontSize="25" Click="BtPress0_Click"></Button>
+            <Button x:Name="BtPressCalc" Grid.Row="3" Grid.Column="2" Margin="5" Content="Calcular" FontSize="25" Click="BtPressCalc_Click"></Button>
+
+            <Button x:Name="BtPressSubstract" Grid.Row="4" Grid.Column="0" Margin="5" Content="-" FontSize="25" Click="BtPressSubstract_Click"></Button>
+            <Button x:Name="BtPressMultiply" Grid.Row="4" Grid.Column="1" Margin="5" Content="*" FontSize="25" Click="BtPressMultiply_Click"></Button>
+            <Button x:Name="BtPressDivide" Grid.Row="4" Grid.Column="2" Margin="5" Content="/" FontSize="25" Click="BtPressDivide_Click"></Button>
+        </Grid>
+    </Grid>
+</Window>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="App.js"></script>
+    <link rel="stylesheet" href="Style.css">
+    
+    <title>Calculadora</title>
+</head>
+<body>
+    
+    <table>
+
+        <tr>
+            <td>
+                <input id="TbResult" type="text">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table>
+                    <tr>
+                        <td>
+                            <input type="button" value="7" class="btn" onclick="app.BtClick_Press(7)">
+                        </td>
+                        <td>
+                            <input type="button" value="8" class="btn" onclick="app.BtClick_Press(8)">
+                        </td>
+                        <td>
+                            <input type="button" value="9" class="btn" onclick="app.BtClick_Press(9)">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="button" value="4" class="btn" onclick="app.BtClick_Press(4)">
+                        </td>
+                        <td>
+                            <input type="button" value="5" class="btn" onclick="app.BtClick_Press(5)">
+                        </td>
+                        <td>
+                            <input type="button" value="6" class="btn" onclick="app.BtClick_Press(6)">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="button" value="1" class="btn" onclick="app.BtClick_Press(1)">
+                        </td>
+                        <td>
+                            <input type="button" value="2" class="btn" onclick="app.BtClick_Press(2)">
+                        </td>
+                        <td>
+                            <input type="button" value="3" class="btn" onclick="app.BtClick_Press(3)">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="button" value="+" class="btn" onclick="app.BtClick_Sum()">
+                        </td>
+                        <td>
+                            <input type="button" value="0" class="btn" onclick="app.BtClick_Press(0)">
+                        </td>
+                        <td>
+                            <input type="button" value="Calc" class="btn" onclick="app.BtClick_Calc()">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="button" value="-" class="btn" onclick="app.BtClick_Sub()">
+                        </td>
+                        <td>
+                            <input type="button" value="*" class="btn" onclick="app.BtClick_Mult()">
+                        </td>
+                        <td>
+                            <input type="button" value="/" class="btn" onclick="app.BtClick_Div()">
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+    </table>
+</body>
+</html>
