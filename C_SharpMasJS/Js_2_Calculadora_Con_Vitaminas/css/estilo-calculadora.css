@@ -1,0 +1,99 @@
+/*elemento{
+	--blanco-roto: #444444;
+} */
+
+/* https://www.tiny.cloud/blog/neon-fonts-and-glowing-text-get-started-in-two-steps/*/
+
+@import url('https://fonts.googleapis.com/css?family=Warnes&display=swap');
+
+
+.neon{
+	font-size: 40px;
+	color: white;
+	font-family: 'Warnes', cursive;
+	
+animation: glow 1s ease-in-out infinite alternate;
+	}
+	@keyframes glow {
+	from {
+		text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0073e6, 0 0 20px #0073e6, 0 0 25px #0073e6, 0 0 30px #0073e6, 0 0 35px #0073e6;
+		}
+		to {
+		text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #0073e6, 0 0 40px #0073e6, 0 0 50px #0073e6, 0 0 60px #0073e6, 0 0 70px #0073e6;
+	}
+}
+
+
+
+body{
+	
+	background-image: url("/img/bgVintage.jpg");
+	
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+
+}
+
+#calculadora{
+	padding: 15px;
+	border-radius: 25px;
+	background: linear-gradient(#9BB9BF, rgb(117, 149, 155));
+	width: 340px;
+	height: 600px;
+	/* máquina de hacer sombras https://www.cssmatic.com/box-shadow */
+	-webkit-box-shadow: 18px 21px 15px 13px rgba(0,0,0,0.75);
+	-moz-box-shadow: 18px 21px 15px 13px rgba(0,0,0,0.75);
+	box-shadow: 18px 21px 15px 13px rgba(0,0,0,0.75);
+}
+
+#display{
+	padding: 5px;
+	background-color: black;
+	color: white;
+	width: 300px;
+	height: 75px;
+	text-align: right;
+	font: 60px Arial;
+	border-radius: 25px;
+}
+
+button{
+	color: #eeeeee;
+	font:  40px Arial;
+	width: 75px;
+	height: 75px;
+	border-radius: 15%;
+	font-weight: bold;
+	text-decoration: none;	
+	box-shadow: 0px 1px 4px -2px #333;
+	text-shadow: 0px -1px #333;
+}
+
+.btn0{
+	width: 150px;
+	border-radius: 20px;
+	background: linear-gradient(#353126, #665f4c);
+}
+.btnGris{
+	background: linear-gradient(#908f7b, #9e9d90);
+}
+.btnNaranja{
+	
+	background: linear-gradient(#c86e00, #c2710f);
+	
+}
+.btnNegro{
+	
+	background: linear-gradient(#353126, #5a5442);
+}
+.btnVerde{
+	background-color: #00CD32;
+	background: linear-gradient(#00CD32, rgb(12, 206, 60));
+}
+
+#division{
+	/* giro*/
+	transform: rotate(90deg);
+}

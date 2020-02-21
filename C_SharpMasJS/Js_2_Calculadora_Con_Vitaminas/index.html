@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="./css/estilo-calculadora.css"/>
+	<script src="js/script-calculadora2.js"  rel="javascript" type="text/javascript"></script>
+	
+	<link href="https://fonts.googleapis.com/css?family=Architects+Daughter&display=swap" rel="stylesheet">
+	<title>CALCULADORA-2 IPHONE</title>
+</head>
+<body onload="iniciar();">
+<center>
+<div ><p class="neon">CALCULADORA FUNCIONAL & DISIGN</p></div>
+<br>
+<div id="calculadora">
+<input type="text" id="display" value="0">
+<br><br>
+	<!--TODO: pasar tabla a DIVs-->
+	<table with="40%" cellpadding="2px">
+		<tr with="10%"><!--Botones de Memoria-->
+			<td><button type="button" id="btnMin" class="btnGris"  onClick="memoriaF('btnMin');">Min</button></td>
+			<td><button type="button" id="btnMmas" class="btnGris" onClick="memoriaF('btnMmas');">M+</button></td>
+			<td><button type="button" id="btnMr" class="btnGris"   onClick="memoriaF('btnMr');">MR</button></td>
+			<td><button type="button" id="btnMc" class="btnGris"   onClick="memoriaF('btnMc');">MC</button></td>
+		</tr>
+		<tr with="10%">
+			<td><button type="button" id="btnC" class="btnGris" onClick="limpiar();">C</button></td>
+			<td><button type="button" id="btnSigno" class="btnGris" onclick="signChange();">+/-</button></td>
+			<td><button type="button" id="btnTantoPor" class="btnGris">%</button></td>
+			<td><button type="button" id="btnDivision" class="btnNaranja" value="/" onClick="operaracion('btnDivision');">D</button></td>
+		</tr>
+		<tr with="10%">
+			<td><button type="button" id="btn7" class="btnNegro" value="7" onClick="pressNumber(btn7.value);">7</button></td>
+			<td><button type="button" id="btn8" class="btnNegro" value="8" onClick="pressNumber(btn8.value);">8</button></td>
+			<td><button type="button" id="btn9" class="btnNegro" value="9"  onClick="pressNumber(btn9.value);">9</button></td>
+			<td><button type="button" id="btnProducto" class="btnNaranja" value="*" onClick="operaracion('btnProducto');">X</button></td>
+		</tr>
+		<tr>
+			<td><button type="button" id="btn4" class="btnNegro" value="4" onClick="pressNumber(btn4.value);">4</button></td>
+			<td><button type="button" id="btn5" class="btnNegro" value="5" onClick="pressNumber(btn5.value);">5</button></td>
+			<td><button type="button" id="btn6" class="btnNegro" value="6" onClick="pressNumber(btn6.value);">6</button></td>
+			<td><button type="button" id="btnResta" class="btnNaranja" value="-" onClick="operaracion('btnResta');">-</button></td>
+		</tr>
+		<tr>
+			<td><button type="button" id="btn1" class="btnNegro" value="1" onClick="pressNumber(btn1.value);">1</button></td>
+			<td><button type="button" id="btn2" class="btnNegro" value="2" onClick="pressNumber(btn2.value);">2</button></td>
+			<td><button type="button" id="btn3" class="btnNegro" value="3" onClick="pressNumber(btn3.value);">3</button></td>
+			<td><button type="button" id="btnSuma" class="btnNaranja" value="+" onClick="operaracion('btnSuma');">+</button></td>
+		</tr>
+		<tr>
+			<td colspan="2"><button type="button" id="btn0" class="btn0" value="0" onClick="pressNumber(btn0.value);">0</button></td>
+			<td><button type="button" id="btnDecimal" class="btnNegro" onClick="coma();">,</button></td>
+			<td><button type="button" id="btnIgual" class="btnNaranja" onClick="operar();">=</button></td>	
+		</tr>
+
+	</table>
+</div>
+</center>
+
+
+</body>
+</html>
