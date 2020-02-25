@@ -6,7 +6,7 @@ let valDisplay;
 let numeroA=0;
 let numeroB=0;
 let memoria=0;
-
+/* Carlos Acevedo*/
 
 function memoriaF(v){
 	let objBtnMr = document.getElementById("btnMr");

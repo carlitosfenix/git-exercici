@@ -13,7 +13,7 @@
         </Grid.RowDefinitions>
 
         <Grid Grid.Row="0">
-            <TextBox x:Name="TbResult"  Margin="5"></TextBox>
+            <TextBox x:Name="TbResult"  Padding="5"  Margin="5" FontSize="40"></TextBox>
         </Grid>
 
         <Grid Grid.Row="1" Margin="10">

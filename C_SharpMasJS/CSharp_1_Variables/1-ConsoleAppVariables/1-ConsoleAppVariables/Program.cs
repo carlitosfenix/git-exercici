@@ -6,6 +6,9 @@ namespace _1_ConsoleAppVariables
     {
         static void Main(string[] args)
         {
+            var stringArray =Colecciones.LosArrays();
+            var miColecciones = new Colecciones();
+            var claveValor =miColecciones.LosDiccionarios();
             var numA = 5;
             var numB = 6;
             var suma = numA + numB;

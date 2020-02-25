@@ -3,8 +3,6 @@ let media = 0;
 let cuenta = 1;
 
 function alIniciar() {
-
-
     arrays();
 
     var numA = 5;
@@ -19,10 +17,6 @@ function alIniciar() {
     primeraVariables();
 
     operadores();
-
-    
-
-
 }
 
 function arrays()
@@ -130,7 +124,4 @@ function primeraVariables() {
     var sel = document.getElementById('parse');
     sel.innerHTML = "Resultado del parseInt: " + entero;
     sel.style.color = "green";
-
-
-
 }

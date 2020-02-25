@@ -13,6 +13,10 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+/**
+ * Carlos Acevedo 24/02/2020
+ */
+
 namespace WPF2_Calculadora_Vitaminas
 {
     /// <summary>
@@ -21,8 +25,7 @@ namespace WPF2_Calculadora_Vitaminas
     public partial class MainWindow : Window
     {
 
-		String display;
-		string operacionClicada;
+	
 		string operacion; //OK
 		bool pendiente =false;
 		 string valDisplay;
@@ -35,6 +38,7 @@ namespace WPF2_Calculadora_Vitaminas
 		public MainWindow()
         {
             InitializeComponent();
+			
 		
         }
 
@@ -71,8 +75,8 @@ namespace WPF2_Calculadora_Vitaminas
 				BtPressMRead.Background = Brushes.Gray;
 			}
 
-			//TODO: cambio de color en la UI
-			//TODO: enviar valor de display a la UI
+			//FET: cambio de color en la UI
+			//FET: enviar valor de display a la UI
 		}
 
 		
