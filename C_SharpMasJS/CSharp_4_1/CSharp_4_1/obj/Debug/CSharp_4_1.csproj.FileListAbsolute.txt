@@ -1,0 +1,14 @@
+C:\Users\formacio\Documents\git-exercici\C_SharpMasJS\CSharp_4_1\CSharp_4_1\obj\Debug\CSharp_4_1.csprojAssemblyReference.cache
+C:\Users\formacio\Documents\git-exercici\C_SharpMasJS\CSharp_4_1\CSharp_4_1\obj\Debug\MainWindow.g.cs
+C:\Users\formacio\Documents\git-exercici\C_SharpMasJS\CSharp_4_1\CSharp_4_1\obj\Debug\App.g.cs
+C:\Users\formacio\Documents\git-exercici\C_SharpMasJS\CSharp_4_1\CSharp_4_1\obj\Debug\CSharp_4_1_MarkupCompile.cache
+C:\Users\formacio\Documents\git-exercici\C_SharpMasJS\CSharp_4_1\CSharp_4_1\obj\Debug\CSharp_4_1_MarkupCompile.lref
+C:\Users\formacio\Documents\git-exercici\C_SharpMasJS\CSharp_4_1\CSharp_4_1\bin\Debug\CSharp_4_1.exe.config
+C:\Users\formacio\Documents\git-exercici\C_SharpMasJS\CSharp_4_1\CSharp_4_1\bin\Debug\CSharp_4_1.exe
+C:\Users\formacio\Documents\git-exercici\C_SharpMasJS\CSharp_4_1\CSharp_4_1\bin\Debug\CSharp_4_1.pdb
+C:\Users\formacio\Documents\git-exercici\C_SharpMasJS\CSharp_4_1\CSharp_4_1\obj\Debug\MainWindow.baml
+C:\Users\formacio\Documents\git-exercici\C_SharpMasJS\CSharp_4_1\CSharp_4_1\obj\Debug\CSharp_4_1.g.resources
+C:\Users\formacio\Documents\git-exercici\C_SharpMasJS\CSharp_4_1\CSharp_4_1\obj\Debug\CSharp_4_1.Properties.Resources.resources
+C:\Users\formacio\Documents\git-exercici\C_SharpMasJS\CSharp_4_1\CSharp_4_1\obj\Debug\CSharp_4_1.csproj.GenerateResource.cache
+C:\Users\formacio\Documents\git-exercici\C_SharpMasJS\CSharp_4_1\CSharp_4_1\obj\Debug\CSharp_4_1.exe
+C:\Users\formacio\Documents\git-exercici\C_SharpMasJS\CSharp_4_1\CSharp_4_1\obj\Debug\CSharp_4_1.pdb
