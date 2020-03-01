@@ -21,37 +21,57 @@
     <br>
     <br>
     <h2>En que puesto juegas (Porter, defensa, migcampista o davanter) :</h2>
+    <!--
+    <div id="papi"></div>
+		<div id="hijo_izquierda"><center>
+			<img class ="boxshadow" src="./img/1_eluid.jpg"></center>
+			<h3>Eliud Kipchoge</h3>
+			<p>El keniano Eliud Kipchoge quien, con 32 años, es el actual campeón olímpico de maratón, 2h 1m 28s y en pista cerrada 2h 25s.
+		En Octubre de 2019 competirá en el evento 1:59:59. </p></div>
+		<div id="hijo_centro"><center><img src="./img/2_corredor.jpg"></center><h3>Lelisa Desisa</h3><p>El etíope Lelisa Desisa también compite por el 1:59:59</p></div>
+		<div id="hijo_derecha"><center><img src="./img/3_corredor.jpg"></center><h3>Zersenay Tadese</h3><p>l Zersenay Tadese nacido Eritrea  asdlkadlkl aks ksdlk kaslkdlk askdk asldklaksdlk asldk</p></div>
+	</div>-->
 
-    <div>
-        <label for="puesto">Tria la teva posició:</label>
+    <div id="papi">
+        <div id="hijo_izquierda">
+            <label for="puesto">Tria la teva posició:</label>
 
-        <select id="puesto" onchange="selectPuesto(this.value);">
-            <option value="Porter">Porter</option>
-            <option value="Defensa">Defensa</option>
-            <option value="Migcampista">Migcampista</option>
-            <option value="Davanter">Davanter</option>
-        </select>
+            <select id="puesto" value="Selecciona" onchange="selectPuesto(this.value);">
+                <option value="Selecciona">Selecciona el puesto puesto</option>
+                <option value="Porter">Porter</option>
+                <option value="Defensa">Defensa</option>
+                <option value="Migcampista">Migcampista</option>
+                <option value="Davanter">Davanter</option>
+            </select>
+        </div>
+        <div id="hijo_centro">
+            <div id="conceptos">
+                <label id="conceptoLb" for="cantidad">Concepto</label>
+                <input id="cantidad" type="text" value="0">
+            </div>
+
+            <div id="conceptos234">
+                <label id="conceptoLb2" for="cantidad">Concepto2</label>
+                <input id="cantidad2" type="text" value="0">
+            </div>
+        </div>  
+
+        <div id="hijo_derecha">
+            <div>
+                <input type="button" value="Valorar" onclick="valoracion();">
+            </div>
+        
+            <div>
+                <br>
+                <br>
+                <div id="salida"></div>
+            </div>
+
+        </div>
     </div>
-    <div id="conceptos">
-        <label id="conceptoLb" for="cantidad">Concepto</label>
-        <input id="cantidad" type="text" value="0">
-
-
-
-    </div>
-    <div id="conceptos34">
-        <label id="conceptoLb2" for="cantidad">Concepto2</label>
-        <input id="cantidad2" type="text" value="0">
-    </div>
-    <div>
-        <input type="button" value="Valorar" onclick="valoracion();">
-    </div>
-
-    <div>
-        <br>
-        <br>
-        <div id="salida"></div>
-    </div>
+   
+    
+    
 
 
 

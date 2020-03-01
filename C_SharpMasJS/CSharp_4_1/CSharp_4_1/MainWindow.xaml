@@ -1,0 +1,30 @@
+﻿<Window x:Class="CSharp_4_1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CSharp_4_1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="550" Width="700" Background="Lavender">
+    <Grid>
+        <Label x:Name="lbNombre" Content="Nombre:" HorizontalAlignment="Left" Margin="73,77,0,0" VerticalAlignment="Top" Width="74"/>
+        <Label x:Name="lbApellido1" Content="1e Apellido:" HorizontalAlignment="Left" Margin="73,120,0,0" VerticalAlignment="Top" Width="74"/>
+        <Label x:Name="lbApellido2" Content="2e Apellido:" HorizontalAlignment="Left" Margin="73,166,0,0" VerticalAlignment="Top" Width="74" RenderTransformOrigin="0.627,2.779"/>
+        <TextBox x:Name="txtBoxNombre" HorizontalAlignment="Left" Height="23" Margin="164,81,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtBoxApellido1" HorizontalAlignment="Left" Height="23" Margin="164,123,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtBoxApellido2" HorizontalAlignment="Left" Height="23" Margin="164,166,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+
+        <Label x:Name="lbDia" Content="Día:" HorizontalAlignment="Left" Margin="371,77,0,0" VerticalAlignment="Top" Width="74"/>
+        <Label x:Name="lbMes" Content="Mes:" HorizontalAlignment="Left" Margin="371,120,0,0" VerticalAlignment="Top" Width="74"/>
+        <Label x:Name="lbAAny" Content="Año no Bisiesto:" HorizontalAlignment="Left" Margin="345,166,0,0" VerticalAlignment="Top" Width="100" RenderTransformOrigin="0.627,2.779"/>
+        <TextBox x:Name="txtBoxDia" HorizontalAlignment="Left" Height="23" Margin="462,81,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtBoxMes" HorizontalAlignment="Left" Height="23" Margin="462,123,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtBoxAny" HorizontalAlignment="Left" Height="23" Margin="462,166,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" />
+
+        <Button x:Name="btnProcesar" Content="Procesar" HorizontalAlignment="Left" Margin="73,379,0,0" VerticalAlignment="Top" Width="75" Click="btnProcesar_Click"/>
+        <TextBlock x:Name="txtOut" HorizontalAlignment="Left" Margin="140,26,0,0" TextWrapping="Wrap" Text="Aquí verás el resultado" VerticalAlignment="Top" Height="17" Width="418"/>
+        <TextBlock x:Name="txtOutBisiesto" HorizontalAlignment="Left" Margin="73,253,0,0" TextWrapping="Wrap" Text="Años Bisiestos o Anys de Traspàs:" VerticalAlignment="Top" Height="79" Width="509"/>
+        <TextBlock x:Name="txtOutTodo" HorizontalAlignment="Left" Margin="416,386,0,0" TextWrapping="Wrap" Text="salida" VerticalAlignment="Top" Height="61" Width="166" RenderTransformOrigin="-0.283,8.655"/>
+
+    </Grid>
+</Window>
