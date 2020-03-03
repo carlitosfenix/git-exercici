@@ -8,6 +8,7 @@ namespace CSharp_4_3
 {
     class Ciudad
     {
+        //TODO: Implementar Icomparable
         private static int _cuenta;
         private string _nombre;
 

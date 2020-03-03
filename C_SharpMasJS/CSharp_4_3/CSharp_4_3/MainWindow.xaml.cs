@@ -21,6 +21,7 @@ namespace CSharp_4_3
     public partial class MainWindow : Window
     {
         Ciudad[] SeisCiudades = new Ciudad[6];
+        string preSalida1 = "Salida ordenada alfabéticamente: ";
 
         public MainWindow()
         {
@@ -37,6 +38,7 @@ namespace CSharp_4_3
             {
                 BtnNewCiudad.IsEnabled = false;
                 Console.WriteLine("Ya se guardaron las 6 ciudades");
+                OrdemarYMostrar();
             }
           
         }
@@ -49,7 +51,19 @@ namespace CSharp_4_3
                 $" la posición {posAntGuardar}");
         }
 
-        
+        private void OrdemarYMostrar()
+        {
+            string ciudadesOrdenadas = "";
+            Array.Sort(SeisCiudades);
+            foreach(Ciudad ciudad in SeisCiudades)
+            {
+                ciudadesOrdenadas += ciudad.Nombre;
+            }
+
+            txtBlockOut.Text = $"{preSalida1} {ciudadesOrdenadas}";
+        }
+
+
     }
 
 }
