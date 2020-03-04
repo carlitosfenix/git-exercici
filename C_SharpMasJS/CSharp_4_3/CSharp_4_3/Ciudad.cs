@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace CSharp_4_3
 {
-    class Ciudad
+    class Ciudad:IComparable<Ciudad>
     {
-        //TODO: Implementar Icomparable
+        //OK: Implementar Icomparable
         private static int _cuenta;
         private string _nombre;
 
@@ -26,6 +26,11 @@ namespace CSharp_4_3
         }
 
         public static int Cuenta => _cuenta;
-    
+
+
+        public int CompareTo(Ciudad other)
+        {
+            return this.Nombre.CompareTo(other.Nombre);
+        }
     }
 }

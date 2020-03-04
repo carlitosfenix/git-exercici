@@ -8,10 +8,14 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Nombre Ciudad:" VerticalAlignment="Top" Margin="93,44,0,0"/>
-        <Button x:Name="BtnNewCiudad" Content="Agregar
-" HorizontalAlignment="Left" Margin="400,49,0,0" VerticalAlignment="Top" Width="75" Click="BtnNewCiudad_Click"/>
+        <Button x:Name="BtnNewCiudad" Content="1y2-Agregar / Luego Ordenar
+" HorizontalAlignment="Left" Margin="376,46,0,0" VerticalAlignment="Top" Width="192" Click="BtnNewCiudad_Click"/>
         <TextBox x:Name="txtCiudad" HorizontalAlignment="Left" Height="23" Margin="225,46,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <TextBlock x:Name="txtBlockOut" HorizontalAlignment="Left" Margin="93,214,0,0" TextWrapping="Wrap" Text="Salida:" VerticalAlignment="Top" RenderTransformOrigin="-1.434,0.174" Height="43" Width="382"/>
+        <TextBlock x:Name="txtBlockOut" HorizontalAlignment="Left" Margin="93,100,0,0" TextWrapping="Wrap" Text="Salida 1 y 2:" VerticalAlignment="Top" RenderTransformOrigin="-1.434,0.174" Height="43" Width="632"/>
+        <TextBlock x:Name="textBlockOut3" HorizontalAlignment="Left" Margin="93,235,0,0" TextWrapping="Wrap" Text="Salida 3:" VerticalAlignment="Top"/>
+        <Button x:Name="btnNewSort" Content="3-New Orden" HorizontalAlignment="Left" Margin="93,185,0,0" VerticalAlignment="Top" Width="119" RenderTransformOrigin="0.425,-0.137" Click="BtnNewSort_Click"/>
+        <Button x:Name="btn4Sort" Content="4-Split Order Inverse" HorizontalAlignment="Left" Margin="93,283,0,0" VerticalAlignment="Top" Width="119" Click="Butn4Sort_Click"/>
+        <TextBlock x:Name="textBlockOut4" HorizontalAlignment="Left" Margin="93,331,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
 
     </Grid>
 </Window>
