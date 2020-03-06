@@ -21,29 +21,29 @@ namespace CSharp_4_4
     /// </summary>
     public partial class MainWindow : Window
     {
-        float Cents1    =   0.01f;
-        float Cents5    =   0.05f;
-        float Cents10   =   0.1f;
-        float Cents50   =   0.5f;
-        float Moneda1   =   1;
-        float Moneda2   =   2;
-        float Billete5  =   5;
-        float Billete10 =  10;
-        float Billete20 =  20;
-        float Billete50 =  50;
-        float Billete100 =100;
-        float Billete200 =200;
-        float Billete500 =500;
+        decimal Cents1    =   0.01m;
+        decimal Cents5    =   0.05m;
+        decimal Cents10   =   0.1m;
+        decimal Cents50   =   0.5m;
+        decimal Moneda1   =   1;
+        decimal Moneda2   =   2;
+        decimal Billete5  =   5;
+        decimal Billete10 =  10;
+        decimal Billete20 =  20;
+        decimal Billete50 =  50;
+        decimal Billete100 =100;
+        decimal Billete200 =200;
+        decimal Billete500 =500;
 
-        float PrecioComida = 0;
+        decimal PrecioComida = 0;
 
         string[] PlatosMenu;
-        float[] PlatosPrecio = new float[5];
+        decimal[] PlatosPrecio = new decimal[5];
         string TextoPlatos = "Ensalada Catalana,Paella,Sopa,Chuletón,Bacalao al Pil Pil";
         string TextoPrecios = "3.5, 9.8, 3.6, 16.6, 12.4";
 
         List<LineaPedido> ListaPedido = new List<LineaPedido>();
-        Dictionary<string, float> Monedas = new Dictionary<string, float>();
+        Dictionary<string, decimal> Monedas = new Dictionary<string, decimal>();
 
         string TextoPagoSugerido = "tendrías que pagar con: "; 
 
@@ -83,8 +83,10 @@ namespace CSharp_4_4
             int count = 0;
             foreach (string precio in strPrecios)
             {
-                float perc = 3.5f;
-                float.TryParse(precio, NumberStyles.Float, CultureInfo.InvariantCulture, out PlatosPrecio[count]);
+                decimal perc = 3.5m;
+                var style = NumberStyles.Number | NumberStyles.AllowCurrencySymbol;
+                var culture = CultureInfo.InvariantCulture;
+                decimal.TryParse(precio,style, culture,  out PlatosPrecio[count]); //NumberStyles.Decimal, CultureInfo.InvariantCulture,
                 Console.WriteLine(perc);
                 count++;
             }
@@ -100,7 +102,7 @@ namespace CSharp_4_4
                 txtBlockPlatos.Text +=$"{plato}, ";
             }
 
-            foreach (float precio in PlatosPrecio)
+            foreach (decimal precio in PlatosPrecio)
             {
                 salidaPrecios += $"{precio}, " ;
             }
@@ -159,11 +161,12 @@ namespace CSharp_4_4
 
         private void CalcularUsoBilletesMonedas()
         {
-            var importeCuenta = LineaPedido.Total + LineaPedido.Total * 0.21;
-            var digits = 2;
+            var importeCuenta = Decimal.Round (LineaPedido.Total + LineaPedido.Total * 0.21m, 2);
+           /* var digits = 2;
             double mult = Math.Pow(10.0, digits);
-            double redondeo = Math.Truncate( mult * importeCuenta) / mult;
-            importeCuenta = redondeo;
+            double redondeoPendiente = Math.Truncate( mult * importeCuenta) / mult;
+            */
+            
             var pendiente = importeCuenta;
 
             do
@@ -177,7 +180,7 @@ namespace CSharp_4_4
                         TextoPagoSugerido += $" {mKeyValue.Key}, ";
                     }
                 }
-            } while (pendiente > 0.01);
+            } while (pendiente >= 0.01m);
 
             Console.WriteLine(TextoPagoSugerido);
             txtPagoSugerido.Text = $" La cuenta con IVA es de: {importeCuenta} {TextoPagoSugerido}";
@@ -188,18 +191,18 @@ namespace CSharp_4_4
     public class LineaPedido
     {
         private string _plato;
-        private float _precio;
+        private decimal _precio;
         private int _id;
         private static int _count;
-        private static float _total;
+        private static decimal _total;
 
         public string Plato { get => _plato; set => _plato = value; }
-        public float Precio { get => _precio; set => _precio = value; }
+        public decimal Precio { get => _precio; set => _precio = value; }
         public int Id { get => _id; set => _id = value; }
         public static int Count { get => _count; set => _count = value; }
-        public static float Total { get => _total; set => _total = value; }
+        public static decimal Total { get => _total; set => _total = value; }
 
-        public LineaPedido(string plato, float precio)
+        public LineaPedido(string plato, decimal precio)
         {
             Plato = plato;
             Precio = precio;
