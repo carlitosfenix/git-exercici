@@ -10,14 +10,16 @@
         <TextBlock x:Name="txtBlockTitulo" HorizontalAlignment="Left" Margin="331,26,0,0" TextWrapping="Wrap" Text="GESTIÓN DE ALUMNOS" VerticalAlignment="Top"/>
         <Label x:Name="lbNombre" Content="Nombre:" HorizontalAlignment="Left" Margin="136,105,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="txtBoxNombre" HorizontalAlignment="Left" Height="23" Margin="136,143,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="btnRegistrarNewStudent" Content="Add Student" HorizontalAlignment="Left" Margin="502,151,0,0" VerticalAlignment="Top" Width="167" Click="BtnRegistrarNota_Click" RenderTransformOrigin="0.528,-0.109"/>
+        <Button x:Name="btnRegistrarNewStudent" Content="Add Student" HorizontalAlignment="Left" Margin="502,143,0,0" VerticalAlignment="Top" Width="78" RenderTransformOrigin="0.528,-0.109" Height="23" Click="btnRegistrarNewStudent_Click"/>
+        <Button x:Name="btnUpdateStudent" Content="Update" HorizontalAlignment="Left" Margin="627,143,0,0" VerticalAlignment="Top" Width="78"  RenderTransformOrigin="0.528,-0.109" Height="23" Click="btnUpdateStudent_Click"/>
+        <Button x:Name="btnDeleteStudent" Content="Delete" HorizontalAlignment="Left" Margin="502,186,0,0" VerticalAlignment="Top" Width="78"  RenderTransformOrigin="0.528,-0.109" Height="23" Click="btnDeleteStudent_Click"/>
+        <Button x:Name="btnListStudents" Content="List" HorizontalAlignment="Left" Margin="627,186,0,0" VerticalAlignment="Top" Width="78"  RenderTransformOrigin="0.528,-0.109" Height="23" Click="btnListStudents_Click"/>
         <Label x:Name="lbDni" Content="DNI:" HorizontalAlignment="Left" Margin="318,105,0,0" VerticalAlignment="Top"/>
         <TextBox x:Name="txtBoxDni" HorizontalAlignment="Left" Height="23" Margin="324,143,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <Label x:Name="lbMateria" Content="Materia:" HorizontalAlignment="Left" Margin="136,203,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtBoxMateria" HorizontalAlignment="Left" Height="23" Margin="136,241,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <Label x:Name="lbTeacher" Content="Profesor:" HorizontalAlignment="Left" Margin="312,203,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtBoxTeachear" HorizontalAlignment="Left" Height="23" Margin="318,241,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="btnRegistrarNewSubject" Content="Add Subject" HorizontalAlignment="Left" Margin="502,249,0,0" VerticalAlignment="Top" Width="167" Click="BtnRegistrarNota_Click" RenderTransformOrigin="0.528,-0.109"/>
+        <Label x:Name="lbMateria" Content="Materia:" HorizontalAlignment="Left" Margin="136,250,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtBoxMateria" HorizontalAlignment="Left" Height="23" Margin="136,288,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="lbTeacher" Content="Profesor:" HorizontalAlignment="Left" Margin="312,250,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtBoxTeachear" HorizontalAlignment="Left" Height="23" Margin="318,288,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <Label x:Name="lbAlumno" Content="Alumno:" HorizontalAlignment="Left" Margin="130,445,0,0" VerticalAlignment="Top"/>
         <ComboBox x:Name="comboBoxAlumno" HorizontalAlignment="Left" Margin="130,484,0,0" VerticalAlignment="Top" Width="120"/>
         <Label x:Name="lbNota" Content="Nota::" HorizontalAlignment="Left" Margin="503,441,0,0" VerticalAlignment="Top"/>
@@ -25,7 +27,14 @@
         <Label x:Name="lbAsignatura" Content="Asignatura:" HorizontalAlignment="Left" Margin="318,445,0,0" VerticalAlignment="Top"/>
         <ComboBox x:Name="comboBoxAsignatura" HorizontalAlignment="Left" Margin="318,484,0,0" VerticalAlignment="Top" Width="120"/>
         <Calendar x:Name="calExam"   HorizontalAlignment="Left" Margin="208,539,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="btnRegistrarNewExam" Content="Add Exam" HorizontalAlignment="Left" Margin="502,687,0,0" VerticalAlignment="Top" Width="167" Click="BtnRegistrarNota_Click" RenderTransformOrigin="0.528,-0.109"/>
+        <Button x:Name="btnRegistrarNewSubject" Content="Add Subject" HorizontalAlignment="Left" Margin="502,288,0,0" VerticalAlignment="Top" Width="78"  RenderTransformOrigin="0.528,-0.109" Height="23" Click="btnRegistrarNewSubject_Click"/>
+        <Button x:Name="btnUpdateSubject" Content="Update" HorizontalAlignment="Left" Margin="627,288,0,0" VerticalAlignment="Top" Width="78"  RenderTransformOrigin="0.528,-0.109" Height="23" Click="btnUpdateSubject_Click"/>
+        <Button x:Name="btnDeleteSubject" Content="Delete" HorizontalAlignment="Left" Margin="502,331,0,0" VerticalAlignment="Top" Width="78"  RenderTransformOrigin="0.528,-0.109" Height="23" Click="btnDeleteSubject_Click"/>
+        <Button x:Name="btnListListSubjects" Content="List" HorizontalAlignment="Left" Margin="627,331,0,0" VerticalAlignment="Top" Width="78" RenderTransformOrigin="0.528,-0.109" Height="23" Click="btnListListSubjects_Click"/>
+        <Button x:Name="btnRegistrarNewExam" Content="Add Exam" HorizontalAlignment="Left" Margin="502,564,0,0" VerticalAlignment="Top" Width="78"  RenderTransformOrigin="0.528,-0.109" Height="23" Click="btnRegistrarNewExam_Click"/>
+        <Button x:Name="btnUpdateExam" Content="Update" HorizontalAlignment="Left" Margin="627,564,0,0" VerticalAlignment="Top" Width="78"  RenderTransformOrigin="0.528,-0.109" Height="23" Click="btnUpdateExam_Click"/>
+        <Button x:Name="btnDeleteExam" Content="Delete" HorizontalAlignment="Left" Margin="502,607,0,0" VerticalAlignment="Top" Width="78"  RenderTransformOrigin="0.528,-0.109" Height="23" Click="btnDeleteExam_Click"/>
+        <Button x:Name="btnListListExams" Content="List" HorizontalAlignment="Left" Margin="627,607,0,0" VerticalAlignment="Top" Width="78"  RenderTransformOrigin="0.528,-0.109" Height="23" Click="btnListListExams_Click"/>
 
     </Grid>
 </Window>
