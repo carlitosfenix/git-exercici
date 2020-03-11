@@ -63,6 +63,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Lib\Utils\Util.cs" />
     <Compile Include="Lib\Model\Student.cs" />
     <Compile Include="Lib\Model\Subject.cs" />
     <Compile Include="Lib\Model\Entity.cs" />

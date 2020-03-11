@@ -1,4 +1,5 @@
-﻿using CSharp_5_2.Lib.Model;
+﻿using CSharp_5_2.Lib.Utils;
+using CSharp_5_2.Lib.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -131,10 +132,11 @@ namespace CSharp_5_2
                 Student dummyStudent = new Student(txtBoxNombre.Text, txtBoxDni.Text);
                 foreach (Student student in ListaStudents)
                 {
-                    if (txtBoxDni.Text.Equals(txtBoxDni.Text))
+                    if (txtBoxDni.Text.Equals(student.Dni))
                     {
                         student.Name = txtBoxNombre.Text;
                         Console.WriteLine($"Se ha actualizado el nombre del alumno con dni {txtBoxDni.Text}");
+                      
                     }
                     else
                     {
@@ -217,7 +219,7 @@ namespace CSharp_5_2
                 Subject dummySubject = new Subject(txtBoxMateria.Text, txtBoxTeachear.Text);
                 foreach (Subject subject in ListaSubjets)
                 {
-                    if (txtBoxDni.Text.Equals(txtBoxDni.Text))
+                    if (dummySubject.Teacher.Equals(subject.Teacher))
                     {
                         subject.Name = txtBoxMateria.Text;
                         Console.WriteLine($"Se ha actualizado la {txtBoxMateria.Text}  ahora la imparte {txtBoxTeachear.Text}");
@@ -290,19 +292,20 @@ namespace CSharp_5_2
         private void btnRegistrarNewExam_Click(object sender, RoutedEventArgs e)
         {
             if ((comboBoxAlumno.SelectedIndex>=0) && (comboBoxAsignatura.SelectedIndex>=0)
-               && !string.IsNullOrWhiteSpace(txtBoxNota.Text) && double.TryParse(txtBoxNota.Text, out var score))
+               && !string.IsNullOrWhiteSpace(txtBoxNota.Text) && double.TryParse(txtBoxNota.Text, out var score)
+               && (calExam.SelectedDate.Value.Date !=null))
             {
-               ;
+               
                 var indxAlumno = comboBoxAlumno.SelectedIndex;
                 var indxMateria = comboBoxAsignatura.SelectedIndex;
-
                 DateTime timeStamp = calExam.SelectedDate.Value.Date;
+
                 Exam dummyExam = new Exam(ListaStudents[indxAlumno],ListaSubjets[indxMateria],timeStamp,score);
-                var result = ListaExams.Where(x => x.Student.Name.Equals(ListaStudents[indxAlumno].Name) 
-                && x.Subject.Name.Equals(ListaSubjets[indxMateria].Name));
+                var result = ListaExams.Where(x => x.Student.Name.Equals(dummyExam.Student.Name) 
+                && x.Subject.Name.Equals(dummyExam.Subject.Name) &&  x.DateTimeExam.Equals(dummyExam.DateTimeExam));
                 if (result != null && result.Count() > 0)
                 {
-                    Console.WriteLine("SOS este alumno ya ha realizado este examen");
+                    Console.WriteLine("SOS este alumno ya ha realizado este examen en la misma fecha");
 
                 }
                 else
@@ -325,10 +328,68 @@ namespace CSharp_5_2
         private void btnUpdateExam_Click(object sender, RoutedEventArgs e)
         {
 
+            var indxAlumno = comboBoxAlumno.SelectedIndex;
+            var indxMateria = comboBoxAsignatura.SelectedIndex;
+            Student dummyStudent = ListaStudents[indxAlumno];
+            Subject dummySubject = ListaSubjets[indxMateria];
+            DateTime timeStamp = calExam.SelectedDate.Value.Date;
+            var notaTexto = txtBoxNota.Text;
+
+            if ((indxAlumno >= 0) && (indxMateria >= 0)
+               && !string.IsNullOrWhiteSpace(notaTexto) && double.TryParse(txtBoxNota.Text, out var score)
+               && (timeStamp != null))
+            {
+                Exam dummyExam = new Exam(dummyStudent, dummySubject, timeStamp, score);
+               
+                foreach (Exam exam in ListaExams)
+                {
+                    if (exam.Student.Equals(dummyStudent) && exam.Subject.Equals(dummySubject) 
+                        && exam.DateTimeExam.Equals(timeStamp) )
+                    {
+                        Console.WriteLine($"Se ha actualizado la nota a {dummyStudent.Name}   por el profesor {dummySubject.Teacher}");
+                        exam.Score = score;
+                    }
+                    else
+                    {
+                        Console.WriteLine($"No se ha localizado el examen de la materia " +
+                            $"{dummySubject.Name} para {dummyStudent.Name}." +
+                            $" Si quiere lo puede dar de alta clicando en Add Exam ");
+                    }
+                }
+            }
+            else
+            {
+                Console.WriteLine("Falta informar algún campo o la información no es válida");
+            }
+
         }
 
         private void btnDeleteExam_Click(object sender, RoutedEventArgs e)
         {
+
+            var indxAlumno = comboBoxAlumno.SelectedIndex;
+            var indxMateria = comboBoxAsignatura.SelectedIndex;
+            Student dummyStudent = ListaStudents[indxAlumno];
+            Subject dummySubject = ListaSubjets[indxMateria];
+            DateTime timeStamp = calExam.SelectedDate.Value.Date;
+            var notaTexto = txtBoxNota.Text;
+
+            if ((indxAlumno >= 0) && (indxMateria >= 0)
+               && !string.IsNullOrWhiteSpace(notaTexto) && double.TryParse(txtBoxNota.Text, out var score)
+               && (timeStamp != null))  
+            {
+                //Borramos si coinciden todos los campos exactamente
+                Exam dummyExam = new Exam(dummyStudent,dummySubject,timeStamp,score);
+                ListaExams.Remove(dummyExam);
+                //Borramos si coincide con la materia, el profesor y la fecha
+                ListaExams.RemoveAll(x => x.Student.Equals(dummyStudent) && x.Subject.Equals(dummySubject)
+                && x.DateTimeExam.Equals (timeStamp));
+                Console.WriteLine("Examen borrado correctamente");
+            }
+            else
+            {
+                Console.WriteLine("La información introducada no corresponde con ningún examen");
+            }
 
         }
 
@@ -337,7 +398,7 @@ namespace CSharp_5_2
             int posicion = 1;
             foreach (Exam exam in ListaExams)
             {
-                Console.WriteLine($"{posicion}-) el alumno {exam.Student.Name} en la materia {exam.Student.Name}, ha obtenido una nota de {exam.Score}");
+                Console.WriteLine($"{posicion}-) El día {exam.DateTimeExam} el alumno {exam.Student.Name} en la materia {exam.Student.Name}, ha obtenido una nota de {exam.Score}");
                 posicion++;
             }
 
