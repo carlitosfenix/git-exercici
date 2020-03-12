@@ -1,0 +1,167 @@
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Nunito", sans-serif;
+    color: steelblue;
+}
+
+form {
+    max-width: 300px;
+    margin: 10px auto;
+    padding: 10px 20px;
+    background: #f4f7f8;
+    border-radius: 8px;
+}
+
+
+/*TODO: terminar de ajustar tamaño máximo */
+
+;
+table {
+    text-align: center;
+    max-width: 600px;
+    height: 200px;
+}
+
+h1 {
+    margin: 0 0 30px 0;
+    text-align: center;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+textarea,
+select {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    font-size: 16px;
+    height: auto;
+    margin: 0;
+    outline: 0;
+    padding: 15px;
+    width: 100%;
+    background-color: Wheat;
+    color: #8a97a0;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+    margin-bottom: 30px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin: 0 4px 8px 0;
+}
+
+select {
+    padding: 6px;
+    height: 32px;
+    border-radius: 2px;
+}
+
+button[type="submit"] {
+    padding: 19px 39px 18px 39px;
+    color: #fff;
+    background-color: limegreen;
+    font-size: 18px;
+    text-align: center;
+    font-style: normal;
+    border-radius: 5px;
+    width: 100%;
+    border: 1px solid lime;
+    border-width: 1px 1px 3px;
+    box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+    margin-bottom: 10px;
+}
+
+button[type="reset"] {
+    padding: 19px 39px 18px 39px;
+    color: #fff;
+    background-color: DeepPink;
+    font-size: 18px;
+    text-align: center;
+    font-style: normal;
+    border-radius: 5px;
+    width: 100%;
+    border: 1px solid tomato;
+    border-width: 1px 1px 3px;
+    box-shadow: 0 -1px 0 rgba(255, 255, 255, 0.1) inset;
+    margin-bottom: 10px;
+}
+
+fieldset {
+    margin-bottom: 30px;
+    border: none;
+}
+
+legend {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+label.light {
+    font-weight: 300;
+    display: inline;
+}
+
+.number {
+    background-color: tan;
+    color: teal;
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    font-size: 0.8em;
+    margin-right: 4px;
+    line-height: 30px;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
+    border-radius: 30%;
+}
+
+@media screen and (min-width: 480px) {
+    form {
+        max-width: 600px;
+    }
+}
+
+#salidaTabla {
+    font-size: 30px;
+    margin-top: 20px;
+    color: rgba(216, 176, 45, 0.513);
+    padding: 15px;
+    border-radius: 25px;
+    background: linear-gradient(rgb(23, 12, 51), rgb(56, 12, 175));
+    width: 100%;
+    height: 200px;
+    animation: glow 0.75s ease-in-out infinite alternate;
+    @keyframes glow {
+        from {
+            text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #0073e6, 0 0 20px #0073e6, 0 0 25px #0073e6, 0 0 30px #0073e6, 0 0 35px #0073e6;
+        }
+        to {
+            text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #0073e6, 0 0 40px #0073e6, 0 0 50px #0073e6, 0 0 60px #0073e6, 0 0 70px #0073e6;
+        }
+        /* máquina de hacer sombras https://www.cssmatic.com/box-shadow */
+        /*
+-webkit-box-shadow: 18px 21px 15px 13px rgba(0, 0, 0, 0.75);
+-moz-box-shadow: 18px 21px 15px 13px rgba(0, 0, 0, 0.75);
+box-shadow: 18px 21px 15px 13px rgba(0, 0, 0, 0.75);*/
+    }
+}
