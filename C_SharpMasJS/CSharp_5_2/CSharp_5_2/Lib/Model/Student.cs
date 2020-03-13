@@ -1,0 +1,31 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace CSharp_5_2.Lib.Model
+{ 
+    public class Student : Entity
+    {
+        private string _name;
+        private string _dni;
+        private List<Exam> _exams;
+
+        public string Name { get => _name; set => _name = value; }
+        public string Dni { get => _dni; set => _dni = value; }
+        public List<Exam> Exams { get => _exams; set => _exams = value; }
+
+        public Student(string name, string dni)
+        {
+            Name = name;
+            Dni = dni;
+        }
+
+        public bool AddExam(Exam newExam)
+        {
+            Exams.Add(newExam);
+            return true;
+        }
+    }
+}

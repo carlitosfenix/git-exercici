@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Ejercicio JavaScript ES PRIMO">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta name="author" content="Carlos Acevedo">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/estilo-calculadora.css" />
+    <script src="js/script-calculadora2.js" rel="javascript" type="text/javascript"></script>
+
+    <link href="https://fonts.googleapis.com/css?family=Architects+Daughter&display=swap" rel="stylesheet">
+    <title>Ejercicio JavaScript ES PRIMO</title>
+</head>
+
+<body onload="iniciar();">
+    <center>
+        <div id=contenedorNeon>
+            <p class="neon sombra">Ejercicio JavaScript ES PRIMO</p>
+        </div>
+        <p class="neonPetit sombra">Entra en el display un número para ver si es PRIMO</p>
+        <p id="tiempoEmpleado" class="neonPetit sombra">Tiempo empleado</p>
+
+        <br>
+        <div id="calculadora">
+
+            <table with="40%" cellpadding="2px">
+                <tr with="10%">
+                    <!--ROW1-->
+                    <td><input class="display" type="text" id="display" value=""></td>
+                </tr>
+                <tr with="30">
+                    <td>
+                        <button type="button" id="btnCalcular" class=" btnGris" onClick="calcular();">CALCULAR</button>
+                    </td>
+                </tr>
+                <tr with="10%">
+                    <!--ROW3-->
+                    <td>
+                        <br>
+                        <br>
+                        <div id="salida" class="salida"></div>
+                    </td>
+
+                </tr>
+            </table>
+        </div>
+    </center>
+
+
+
+</body>
+
+</html>
