@@ -36,7 +36,7 @@ namespace CSharp_4_4
         decimal Billete500 =500;
 
         decimal PrecioComida = 0;
-
+        string Separador = "*****************************************************";
         string[] PlatosMenu;
         decimal[] PlatosPrecio = new decimal[5];
         string TextoPlatos = "Ensalada Catalana,Paella,Sopa,Chuletón,Bacalao al Pil Pil";
@@ -55,7 +55,44 @@ namespace CSharp_4_4
             LlenarArraysMenuPrecio();
             LlenarDictionayMoneda();
             btnFinPedido.IsEnabled = false;
+            PruebasLINQ();
+            PruebasLinqFluent();
     }
+
+      
+
+        private void PruebasLINQ()
+        {
+            var monedasMenores10 = from elemento in Monedas
+                          where elemento.Value < 10
+                          orderby elemento.Key
+                          select new { elemento.Key, elemento.Value };
+            Console.WriteLine(Separador);
+            foreach (var result in monedasMenores10)
+            {
+                Console.WriteLine($"Menores de 10: {result}");
+            }
+            Console.WriteLine(Separador);
+        }
+
+
+        private void PruebasLinqFluent()
+        {
+            var monedasMenores10 = Monedas
+                .Where(elemento => elemento.Value < 10)
+                .OrderBy(elemento => elemento.Key)
+                .Select(elemento => new { elemento.Key, elemento.Value });
+
+            foreach (var result in monedasMenores10)
+            {
+                Console.WriteLine($"Menores de 10 esilo fluent: {result}");
+            }
+            Console.WriteLine(Separador);
+
+
+        }
+
+
 
         private void LlenarDictionayMoneda()
         {

@@ -1,0 +1,114 @@
+<head>
+    <meta charset="utf-8">
+    <meta charset="UTF-8" />
+    <meta name="description" content="Ejercicio JavaScript PP HOTEL">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta name="author" content="Carlos Acevedo">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ejercicio JavaScript PP HOTEL</title>
+    <!--<link rel="stylesheet" href="./4-estilos/estilo1.css" type='text/css'> -->
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/estilo2.css" type='text/css'>
+
+
+</head>
+
+<body onload="iniciar();">
+
+    <form onsubmit="validarFormularioEnSubmit();">
+        <!-- action="index.html" method="post"-->
+
+        <h1>CRUDS HOTELES</h1>
+
+        <fieldset>
+            <legend><span class="number">1</span>Datos Básicos Hotel</legend>
+            <label for="name">Nombre:</label>
+            <input type="text" id="nameHotel" name="hotel_name" value="Pruebas">
+            <div id="nameError"></div>
+
+            <label for="numHabitaciones">Num Habitaciones:</label>
+            <input type="number" id="numHabitaciones" name="hotel_num_habitaciones">
+            <div id="numHabitacionesError"></div>
+
+            <label for="numPlantas">Numero Plantas:</label>
+            <input type="number" id="numPlantas" name="hotel_num_plantas">
+            <div id="numPlantasError"></div>
+
+            <label for="date">Superficie Total:</label>
+            <input type="number" id="supTotal" name="hotel_sup_total">
+        </fieldset>
+        <!---
+        <fieldset>
+            <legend><span class="number">2</span>Tu perfil</legend>
+            <label for="bio">¿Cómo te defines?:</label>
+            <textarea id="bio" name="user_bio"></textarea>
+        </fieldset>
+        <fieldset>
+            <label for="job">Selecciona tu perfil principal:</label>
+            <!--Select agrupado -->  
+   <!--
+            <select id="job" name="user_job">
+          <optgroup label="Web">
+            <option value="frontend_developer">Front-End Developer</option>
+            <option value="php_developor">PHP Developer</option>
+            <option value="python_developer">Python Developer</option>
+            <option value="rails_developer"> Rails Developer</option>
+            <option value="web_designer">Web Designer</option>
+            <option value="WordPress_developer">WordPress Developer</option>
+          </optgroup>
+          <optgroup label="Mobile">
+            <option value="Android_developer">Androild Developer</option>
+            <option value="iOS_developer">iOS Developer</option>
+            <option value="mobile_designer">Mobile Designer</option>
+          </optgroup>
+          <optgroup label="Business">
+            <option value="business_owner">Business Owner</option>
+            <option value="freelancer">Freelancer</option>
+          </optgroup>
+          <optgroup label="Other">
+            <option value="secretary">Secretary</option>
+            <option value="maintenance">Maintenance</option>
+          </optgroup>
+        </select>
+
+            <label>Hobbies:</label>
+            <center>
+                <table>
+                    <tr>
+                        <td><input type="checkbox" id="development" value="interest_development" name="user_interest"><label class="light" for="development">Senderismo</label><br> </td>
+                        <td><input type="checkbox" id="design" value="interest_design" name="user_interest"><label class="light" for="design">Running</label><br></td>
+                        <td><input type="checkbox" id="business" value="interest_business" name="user_interest"><label class="light" for="business">Escalada</label></td>
+                        <tr>
+                            <tr>
+                                <td><input type="checkbox" id="development" value="interest_development" name="user_interest"><label class="light" for="development">Lectura</label><br> </td>
+                                <td><input type="checkbox" id="design" value="interest_design" name="user_interest"><label class="light" for="design">Juegos</label><br></td>
+                                <td><input type="checkbox" id="business" value="interest_business" name="user_interest"><label class="light" for="business">Pasear</label></td>
+                                <tr>
+                </table>
+            </center>
+
+        </fieldset>
+
+        -->
+        <button id="insert" type="button" onclick="pedirInsert();">Alta</button>
+        <button id="update" type="button" onclick="pedirUpdate();">Modificar</button>
+        <button id="select" type="button" onclick="pedirSelect();">Listar</button>
+        <button id="delete" type="button" onclick="pedirDelete();">Borrar</button>
+
+        <!--
+        <button type="reset">Borrar</button>
+        <button type="submit">Registrar</button>-->
+        <!-- si es de tipo submit nos iremos al server type="submit" o a lo que diga el método onsubmit arriba en el tag form-->
+        <div>
+            <div id="salidaTabla">
+
+            </div>
+        </div>
+    </form>
+
+
+
+</body>
+
+</html>
