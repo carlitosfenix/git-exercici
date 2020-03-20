@@ -71,7 +71,7 @@ select {
     border-radius: 2px;
 }
 
-button[type="submit"], #insert, #select, #personal {
+button[type="submit"], #crearCC, #ingreso,#listTransac, #listDatosCC {
     padding: 19px 39px 18px 39px;
     color: #fff;
     background-color: rgb(26, 161, 82);
@@ -86,7 +86,7 @@ button[type="submit"], #insert, #select, #personal {
     margin-bottom: 10px;
 }
 
-button[type="reset"], #update, #delete {
+button[type="reset"], #retirada, #cerrarCC  {
     padding: 19px 39px 18px 39px;
     color: #fff;
     background-color: rgb(119, 30, 77);
