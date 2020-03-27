@@ -1,0 +1,184 @@
+<head>
+    <meta charset="utf-8">
+    <meta charset="UTF-8" />
+    <meta name="description" content="Ejercicio JavaScript PP HOTEL">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta name="author" content="Carlos Acevedo">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <title>Ejercicio JavaScript EDIFICIOS</title>
+    <!--<link rel="stylesheet" href="./4-estilos/estilo1.css" type='text/css'> -->
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/estilo2.css" type='text/css'>
+
+
+</head>
+
+<body onload="iniciar();">
+
+    
+        <h1>EDIFICIOS</h1>
+  
+	<div id="PanelEdificios" > <!-- style="display:none;"-->
+		<br>
+		<div class="row" id="conjunto_vertical">
+			<form class="Panel" action="formulario.html" method="post" id="form">
+	      
+	        <h2>HOSPITALES</h2>
+	        <br>
+	        <div class="article-asset-image article-asset-normal"> 
+                <form onsubmit="">
+             
+                    <fieldset>
+                    
+                        <label for="nomHospital">Nombre</label>
+                        <input type="text" id="nomHospital" name="nomHospital" value="Jesusito">
+                        <div id="nomHospitalError"></div>
+            
+                        <label for="numPlantasHospital">Número de Plantas:</label>
+                        <input type="number" id="numPlantasHospital" name="numPlantas_hos">
+                        <div id="numPlantasHospitalError"></div>
+            
+                        <label for="superficieHospital">Superficie en m2:</label>
+                        <input type="number" id="superficieHospital" name="superficie_hos">
+                        <div id="superficieHospitalError"></div>
+
+                        <label for="numEnfermosHospital">Número de enfermos:</label>
+                        <input type="number" id="numEnfermosHospital" name="numEnfermos_hos">
+                        <div id="numEnfermosHospitalError"></div>
+                    </fieldset>
+                    
+                   
+                    <button id="crearHospital" type="button" onclick="altaHospital();">ALTA HOSPITAL</button>
+                    <button id="demolerHospital" type="button" onclick="bajaHospital();">BAJA HOSPITAL</button>
+                    
+                    <!--
+                    <button type="reset">Borrar</button>
+                    <button type="submit">Registrar</button>-->
+                    <!-- si es de tipo submit nos iremos al server type="submit" o a lo que diga el método onsubmit arriba en el tag form-->
+                 
+                </form>    
+            
+                <p> Crearemos HOSPITALES.</p>
+            </div>
+	        
+	        
+	       
+	     	</form>
+	     	<form  class="Panel" action="formulario.html" method="post" id="form">
+	      
+	        <h2>HOTELES</h2>
+	        <br>
+	        <div class="article-asset-image article-asset-normal"> 
+                <form onsubmit="">
+             
+                    <fieldset>
+                    
+                        <label for="nomHospital">Nombre</label>
+                        <input type="text" id="nomHospital" name="nomHospital" value="SOL Y PLAYA">
+                        <div id="nomHospitalError"></div>
+            
+                        <label for="numPlantasHotel">Número de Plantas:</label>
+                        <input type="number" id="numPlantasHospital" name="numPlantas_hos">
+                        <div id="numPlantasHospitalError"></div>
+            
+                        <label for="superficieHospital">Superficie en m2:</label>
+                        <input type="number" id="superficieHospital" name="superficie_hos">
+                        <div id="superficieHospitalError"></div>
+
+                        <label for="numEnfermosHospital">Número de enfermos:</label>
+                        <input type="number" id="numEnfermosHospital" name="numEnfermos_hos">
+                        <div id="numEnfermosHospitalError"></div>
+                    </fieldset>
+                    
+                   
+                    <button id="crearHospital" type="button" onclick="altaHospital();">ALTA HOSPITAL</button>
+                    <button id="demolerHospital" type="button" onclick="bajaHospital();">BAJA HOSPITAL</button>
+                    
+                    <!--
+                    <button type="reset">Borrar</button>
+                    <button type="submit">Registrar</button>-->
+                    <!-- si es de tipo submit nos iremos al server type="submit" o a lo que diga el método onsubmit arriba en el tag form-->
+                 
+                </form>    
+            
+                <p> Crearemos HOTELES.</p>    
+            
+            </div>
+	    
+	       
+	     	</form>
+	     	<form class="Panel" action="formulario.html" method="post" id="form">
+	      
+	        <h2>CINES</h2>
+	        <br>
+	        <div class="article-asset-image article-asset-normal"> 
+                <form onsubmit="">
+             
+                    <fieldset>
+                    
+                        <label for="nomHospital">Nombre</label>
+                        <input type="text" id="nomHospital" name="nomHospital" value="Odisea">
+                        <div id="nomHospitalError"></div>
+            
+                        <label for="numPlantasHotel">Número de Plantas:</label>
+                        <input type="number" id="numPlantasHospital" name="numPlantas_hos">
+                        <div id="numPlantasHospitalError"></div>
+            
+                        <label for="superficieHospital">Superficie en m2:</label>
+                        <input type="number" id="superficieHospital" name="superficie_hos">
+                        <div id="superficieHospitalError"></div>
+
+                        <label for="numEnfermosHospital">Número de enfermos:</label>
+                        <input type="number" id="numEnfermosHospital" name="numEnfermos_hos">
+                        <div id="numEnfermosHospitalError"></div>
+                    </fieldset>
+                    
+                   
+                    <button id="crearHospital" type="button" onclick="altaHospital();">ALTA HOSPITAL</button>
+                    <button id="demolerHospital" type="button" onclick="bajaHospital();">BAJA HOSPITAL</button>
+                    
+                    <!--
+                    <button type="reset">Borrar</button>
+                    <button type="submit">Registrar</button>-->
+                    <!-- si es de tipo submit nos iremos al server type="submit" o a lo que diga el método onsubmit arriba en el tag form-->
+                 
+                </form>    
+            
+                <p>Creearemos CINES</p>
+            
+            
+            
+            </div>
+	     
+	        
+	       
+	     	</form>
+	     		<form class="Panel" action="formulario.html" method="post" id="ajustable">
+	      
+            <h2>CONSTRUIDOS</h2>
+            <br>
+            <p>Construcciones finalizadas:</p>
+	        <br>
+	        <div  class="article-asset-image article-asset-normal">
+                    <textarea id="salidaTabla">
+                    </textarea>
+                </div>
+	        
+	        
+	       
+	     	</form>
+  		</div>
+	</div>
+
+    
+
+
+
+</body>
+
+</html>
