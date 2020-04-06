@@ -29,7 +29,7 @@ animation: glow 1s ease-in-out infinite alternate;
 
 body{
 	
-	background-image: url("/img/bgVintage.jpg");
+	background-image: url("../img/bgVintage.jpg");
 	
 	background-repeat: no-repeat;
 	background-size: cover;
