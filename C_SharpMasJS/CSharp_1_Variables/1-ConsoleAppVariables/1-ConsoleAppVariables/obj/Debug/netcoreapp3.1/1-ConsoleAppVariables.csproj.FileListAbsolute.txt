@@ -9,3 +9,16 @@ C:\Users\formacio\Documents\git-exercici\C_SharpMasJS\CSharp_1_Variables\1-Conso
 C:\Users\formacio\Documents\git-exercici\C_SharpMasJS\CSharp_1_Variables\1-ConsoleAppVariables\1-ConsoleAppVariables\obj\Debug\netcoreapp3.1\1-ConsoleAppVariables.AssemblyInfo.cs
 C:\Users\formacio\Documents\git-exercici\C_SharpMasJS\CSharp_1_Variables\1-ConsoleAppVariables\1-ConsoleAppVariables\obj\Debug\netcoreapp3.1\1-ConsoleAppVariables.dll
 C:\Users\formacio\Documents\git-exercici\C_SharpMasJS\CSharp_1_Variables\1-ConsoleAppVariables\1-ConsoleAppVariables\obj\Debug\netcoreapp3.1\1-ConsoleAppVariables.pdb
+E:\Google Drive\miCopia\.NET 2020\C_SharpMasJS\CSharp_1_Variables\1-ConsoleAppVariables\1-ConsoleAppVariables\bin\Debug\netcoreapp3.1\1-ConsoleAppVariables.exe
+E:\Google Drive\miCopia\.NET 2020\C_SharpMasJS\CSharp_1_Variables\1-ConsoleAppVariables\1-ConsoleAppVariables\bin\Debug\netcoreapp3.1\1-ConsoleAppVariables.deps.json
+E:\Google Drive\miCopia\.NET 2020\C_SharpMasJS\CSharp_1_Variables\1-ConsoleAppVariables\1-ConsoleAppVariables\bin\Debug\netcoreapp3.1\1-ConsoleAppVariables.runtimeconfig.json
+E:\Google Drive\miCopia\.NET 2020\C_SharpMasJS\CSharp_1_Variables\1-ConsoleAppVariables\1-ConsoleAppVariables\bin\Debug\netcoreapp3.1\1-ConsoleAppVariables.runtimeconfig.dev.json
+E:\Google Drive\miCopia\.NET 2020\C_SharpMasJS\CSharp_1_Variables\1-ConsoleAppVariables\1-ConsoleAppVariables\bin\Debug\netcoreapp3.1\1-ConsoleAppVariables.dll
+E:\Google Drive\miCopia\.NET 2020\C_SharpMasJS\CSharp_1_Variables\1-ConsoleAppVariables\1-ConsoleAppVariables\bin\Debug\netcoreapp3.1\1-ConsoleAppVariables.pdb
+E:\Google Drive\miCopia\.NET 2020\C_SharpMasJS\CSharp_1_Variables\1-ConsoleAppVariables\1-ConsoleAppVariables\obj\Debug\netcoreapp3.1\1-ConsoleAppVariables.csprojAssemblyReference.cache
+E:\Google Drive\miCopia\.NET 2020\C_SharpMasJS\CSharp_1_Variables\1-ConsoleAppVariables\1-ConsoleAppVariables\obj\Debug\netcoreapp3.1\1-ConsoleAppVariables.csproj.CoreCompileInputs.cache
+E:\Google Drive\miCopia\.NET 2020\C_SharpMasJS\CSharp_1_Variables\1-ConsoleAppVariables\1-ConsoleAppVariables\obj\Debug\netcoreapp3.1\1-ConsoleAppVariables.AssemblyInfoInputs.cache
+E:\Google Drive\miCopia\.NET 2020\C_SharpMasJS\CSharp_1_Variables\1-ConsoleAppVariables\1-ConsoleAppVariables\obj\Debug\netcoreapp3.1\1-ConsoleAppVariables.AssemblyInfo.cs
+E:\Google Drive\miCopia\.NET 2020\C_SharpMasJS\CSharp_1_Variables\1-ConsoleAppVariables\1-ConsoleAppVariables\obj\Debug\netcoreapp3.1\1-ConsoleAppVariables.dll
+E:\Google Drive\miCopia\.NET 2020\C_SharpMasJS\CSharp_1_Variables\1-ConsoleAppVariables\1-ConsoleAppVariables\obj\Debug\netcoreapp3.1\1-ConsoleAppVariables.pdb
+E:\Google Drive\miCopia\.NET 2020\C_SharpMasJS\CSharp_1_Variables\1-ConsoleAppVariables\1-ConsoleAppVariables\obj\Debug\netcoreapp3.1\1-ConsoleAppVariables.genruntimeconfig.cache

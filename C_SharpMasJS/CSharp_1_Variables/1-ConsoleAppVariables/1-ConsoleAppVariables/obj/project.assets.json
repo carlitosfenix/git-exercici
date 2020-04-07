@@ -8,19 +8,19 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\formacio\\.nuget\\packages\\": {}
+    "C:\\Users\\Carli\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\formacio\\Documents\\git-exercici\\C_SharpMasJS\\CSharp_1_Variables\\1-ConsoleAppVariables\\1-ConsoleAppVariables\\1-ConsoleAppVariables.csproj",
+      "projectUniqueName": "E:\\Google Drive\\miCopia\\.NET 2020\\C_SharpMasJS\\CSharp_1_Variables\\1-ConsoleAppVariables\\1-ConsoleAppVariables\\1-ConsoleAppVariables.csproj",
       "projectName": "1-ConsoleAppVariables",
-      "projectPath": "C:\\Users\\formacio\\Documents\\git-exercici\\C_SharpMasJS\\CSharp_1_Variables\\1-ConsoleAppVariables\\1-ConsoleAppVariables\\1-ConsoleAppVariables.csproj",
-      "packagesPath": "C:\\Users\\formacio\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\formacio\\Documents\\git-exercici\\C_SharpMasJS\\CSharp_1_Variables\\1-ConsoleAppVariables\\1-ConsoleAppVariables\\obj\\",
+      "projectPath": "E:\\Google Drive\\miCopia\\.NET 2020\\C_SharpMasJS\\CSharp_1_Variables\\1-ConsoleAppVariables\\1-ConsoleAppVariables\\1-ConsoleAppVariables.csproj",
+      "packagesPath": "C:\\Users\\Carli\\.nuget\\packages\\",
+      "outputPath": "E:\\Google Drive\\miCopia\\.NET 2020\\C_SharpMasJS\\CSharp_1_Variables\\1-ConsoleAppVariables\\1-ConsoleAppVariables\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\formacio\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Carli\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -58,7 +58,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
       }
     }
   }
