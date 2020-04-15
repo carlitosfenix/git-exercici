@@ -86,7 +86,7 @@ namespace Academy_4_DbContext
 
         private void btnListListSubjects_Click(object sender, RoutedEventArgs e)
         {
-            DbContext.ListSubjets(txtBoxMateria.Text, txtBoxTeachear.Text);
+            DbContext.ListSubjets();
         }
         #endregion CRUDS Subject
 

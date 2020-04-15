@@ -191,7 +191,7 @@ namespace Academy.Lib.Context
             return txtBoxMateria;
         }
 
-        public static void ListSubjets(string txtBoxMateria, string txtBoxTeachear)
+        public static void ListSubjets()
         {
             int posicion = 1;
             foreach (Subject subjet in ListaSubjets)
