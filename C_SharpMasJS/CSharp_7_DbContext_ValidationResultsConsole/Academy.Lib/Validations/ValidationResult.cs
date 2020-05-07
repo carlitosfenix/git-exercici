@@ -5,6 +5,7 @@ namespace Academy_4_DbContext.Lib.Validations
     public class ValidationResult
     {
         private bool _isSuccess;
+        public static string NewLine => "\r\n";
         public bool IsSuccess { get => _isSuccess; set => _isSuccess = value; }
         public List<string> Errors { get ; set; } = new List<string>();
 
@@ -15,7 +16,7 @@ namespace Academy_4_DbContext.Lib.Validations
                 var output = string.Empty;
 
                 foreach (var error in Errors)
-                    output += error + "\n\r";
+                    output += error + NewLine;
 
                 return output;
             }

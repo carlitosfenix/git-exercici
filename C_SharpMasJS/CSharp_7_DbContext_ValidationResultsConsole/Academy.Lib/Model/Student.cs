@@ -9,7 +9,7 @@ namespace Academy_4_DbContext.Lib.Model
 { 
     public class Student : Entity
     {
-         public enum ResultDNI
+        public enum ResultDNI
         {
             LongitudIncorrecta = 0,
             NumeroNoValido     = 1,

@@ -18,6 +18,8 @@ namespace Academy.Lib.Context
         public static string NewLine => "\r\n";
 
         #region CRUDs Student
+
+        /* Versión previa ValidationResults */
         static public Student RegistrarNewStudent(string txtBoxNombre, string txtBoxDni)
         {
             Student resultStudent = null;
@@ -48,10 +50,7 @@ namespace Academy.Lib.Context
 
 
         
-           
-
-           
-
+     /*Version ValidationResults */      
      static public SaveResult<Student> SaveStudent(Student student)
      {
         var output = new SaveResult<Student>() { Entity = student };
@@ -63,7 +62,7 @@ namespace Academy.Lib.Context
             {
                 output.IsSuccess = false;
                 output.Validation.Errors.Add($"El alumno {result.First().Value.Name} ya está registrado con este dni, por favor, reviselos.");
-                Console.WriteLine($"El alumno {result.First().Value.Name} ya está registrado con este dni, por favor, reviselos.");
+               
             }
             else
             {
@@ -71,13 +70,14 @@ namespace Academy.Lib.Context
                 student.Save();
                 DictionayStudents.Add(student.Id, student);
                 DniIndexStudents.Add(student.Dni, student);
-                Console.WriteLine("Alumno guardado correctamente. ¿Qué quieres hacer ahora?");  
+                output.Validation.Errors.Add("Alumno guardado correctamente. ¿Qué quieres hacer ahora?"); 
             }
         }
         else
         {
-            Console.WriteLine("Los campos Nombre y/o DNI no contienen información o no es válida");
+                output.Validation.Errors.Add("Los campos Nombre y/o DNI no contienen información o no es válida");
         }
+        Console.WriteLine(output.AllErrors);
         return output;
       }
 

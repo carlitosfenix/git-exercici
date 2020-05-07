@@ -149,7 +149,7 @@ namespace CSharp_6_DbContext_Console
 
            //Versión anterior sin valete bool salida =(DbContext.RegistrarNewStudent(nombre, dni)==null)? false : true;
             Student student = new Student(nombre, dni);
-            bool salida =  DbContext.SaveStudent(student).IsSuccess;
+            bool salida = DbContext.SaveStudent(student).IsSuccess;
             return salida;
         }
 
