@@ -13,7 +13,7 @@ namespace Academy.Lib.Models
     public class Student : Entity
     {
 
-        public enum ResultDNI
+        private enum ResultDNI
         {
             LongitudIncorrecta = 0,
             NumeroNoValido = 1,
@@ -166,7 +166,7 @@ namespace Academy.Lib.Models
         }
 
         #endregion
-
+         
         public string Dni { get; set; }
         public string Name { get; set; }
 
@@ -235,7 +235,7 @@ namespace Academy.Lib.Models
         /// </summary>
         /// <param name="dni"></param>
         /// <returns></returns>
-        static public ResultDNI ValidarDNI(string dni)
+        private static ResultDNI ValidarDNI(string dni)
         {
             dni = dni.Trim();
             int longitud = dni.Length;
@@ -270,14 +270,14 @@ namespace Academy.Lib.Models
         /// </summary>
         /// <param name="numeroDNI"></param>
         /// <returns></returns>
-        static private char CharDelDNI(int numeroDNI)
+        private static char CharDelDNI(int numeroDNI)
         {
             string letras = "TRWAGMYFPDXBNJZSQVHLCKE";
             char letra = letras[numeroDNI % 23];
             return letra;
         }
 
-        static public bool ValidarNombre(string nombre)
+        private static bool ValidarNombre(string nombre)
         {
             nombre = nombre.Trim();
             string[] nomApellidos = nombre.Split();

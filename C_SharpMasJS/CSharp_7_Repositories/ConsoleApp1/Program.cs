@@ -16,13 +16,14 @@ namespace ConsoleApp1
 
 
         public static StudentRepository StudentRepository { get; set; }
-
         public static SubjectRepository SubjectRepository { get; set; }
+        public static ExamRepository ExamRepository { get; set; }
 
         static void Main(string[] args)
         {
             StudentRepository = new StudentRepository();
             SubjectRepository = new SubjectRepository();
+            ExamRepository   = new ExamRepository();
             Presentacion();
         }
 
@@ -78,7 +79,7 @@ namespace ConsoleApp1
                 var option = Console.ReadKey().KeyChar;
 
 
-                switch (option)
+               switch (option)
                 {
 
                     case 'p':
@@ -94,7 +95,7 @@ namespace ConsoleApp1
                         MenuMaterias();
                         break;
                     case 'e':
-                        //TODO: MenuExamenes();
+                        MenuExamenes();
                         break;
                     case 's':
                         //TODO: MenuEstadisticas();
@@ -331,7 +332,7 @@ namespace ConsoleApp1
         }
         #endregion Flujo y llamadas a SubjectRepository
 
-        #region Flujo y llamadas a DbContext para Materias
+        #region Flujo y llamadas a SubjectRepository para Materias
         private static void MenuMaterias()
         {
             OpcionActual = "m";
@@ -378,36 +379,12 @@ namespace ConsoleApp1
             MenuPrincipal();
         }
 
-        private static void MateriasListado()
-        {
-            LimpiarConsoleLine();
-            Console.WriteLine("3 - 3) Listado de Materias.");
-            var dicSubjectsByName= SubjectRepository.GetAllSubjects();
-            if (dicSubjectsByName.Count < 1)
-            {
-                Console.WriteLine("");
-                Console.WriteLine("Todavía no hay registrada ninguna materia.");
-                Console.WriteLine("¿Algo más del menú de materias?, en caso contrario entra 'p' para ir al menú principal.");
-            }
-            else
-            {
-                int posicion = 1;
-                foreach (Subject subject in dicSubjectsByName.Values)
-                {
-                    Console.WriteLine($"{posicion}-) La materia {subject.Name} la imparte el maestro {subject.Teacher}");
-                    posicion++;
-                }
-            }
-        }
-
-
         private static bool MateriaAlta()
         {
             LimpiarConsoleLine();
             Console.WriteLine("3 - 1) Alta de Materia. Para volver al menú Materia en cualquier momento entra *.");
             Console.WriteLine("Entra el nombre de la materia:");
             Console.WriteLine("Para volver sin guardar asignatura escriba  *.");
-            Console.WriteLine("entra el nombre de la materia:");
 
             var name = "";
             bool primera = true;
@@ -504,12 +481,196 @@ namespace ConsoleApp1
             return false;
         }
 
+        private static void MateriasListado()
+        {
+            LimpiarConsoleLine();
+            Console.WriteLine("3 - 3) Listado de Materias.");
+            var dicSubjectsByName = SubjectRepository.GetAllSubjects();
+            if (dicSubjectsByName.Count < 1)
+            {
+                Console.WriteLine("");
+                Console.WriteLine("Todavía no hay registrada ninguna materia.");
+                Console.WriteLine("¿Algo más del menú de materias?, en caso contrario entra 'p' para ir al menú principal.");
+            }
+            else
+            {
+                int posicion = 1;
+                foreach (Subject subject in dicSubjectsByName.Values)
+                {
+                    Console.WriteLine($"{posicion}-) La materia {subject.Name} la imparte el maestro {subject.Teacher}");
+                    posicion++;
+                }
+            }
+        }
+
+        #endregion Materias
+        private static void MenuExamenes()
+        {
+            OpcionActual = "e";
+            nomMenu = "Examenes";
+            LimpiarPantallaTMP();
+            Console.WriteLine(Separador);
+            Console.WriteLine("4) Menú para la gestión de Exámenes.");
+            Console.WriteLine(Separador);
+            Console.WriteLine("Opción: a - para añadir una nuevo Examen");
+            Console.WriteLine("Opción: e - para editar un Examen");
+            Console.WriteLine("Opción: l - listar Examenes");
+            Console.WriteLine("Presione 'p' para acabar y volver al menú principal");
+            ControlDeFlujoExamenes();
+        }
+
+        private static void ControlDeFlujoExamenes()
+        {
+            var continuar = true;
+            while (continuar)
+            {
+                var option = Console.ReadKey().KeyChar;
+
+                switch (option)
+                {
+                    case 'p':
+                        continuar = false;
+                        break;
+                    case 'a':
+                        ExamenAlta();
+                        break;
+                    case 'e':
+                        //TODO: ExamenEdicion();
+                        break;
+                    case 'l':
+                        ExamenesListado();
+                        break;
+                }
+                LimpiarConsoleLine();
+                if (option.Equals('*'))
+                {
+                    OpcionNoGuardar();
+                }
+            }
+            MenuPrincipal();
+        }
+
+        private static void ExamenesListado()
+        {
+            LimpiarConsoleLine();
+            Console.WriteLine("4 - 3) Listado de Examen.");
+            var dicExamsByDniDate = ExamRepository.GetAllExamns();
+            if (dicExamsByDniDate.Count < 1)
+            {
+                Console.WriteLine("");
+                Console.WriteLine("Todavía no hay registrado ningún examen.");
+                Console.WriteLine("¿Algo más del menú de exámenes?, en caso contrario entra 'p' para ir al menú principal.");
+            }
+            else
+            {
+                int posicion = 1;
+                foreach (Exam exam in dicExamsByDniDate.Values)
+                {
+                    Console.WriteLine($"{posicion}-) El examen de {exam.Subject.Name} de fecha {exam.DateTimeExam}, impartido por {exam.Subject.Teacher}, realizado por {exam.Student.Name} obtuvo una nota de {exam.Score}");
+                    posicion++;
+                }
+            }
+
+
+        }
+
+        private static bool ExamenAlta()
+        {
+            LimpiarConsoleLine();
+            Console.WriteLine("4 - 1) Alta de Examen.");
+            Console.WriteLine("Para volver sin guardar examen entra *.");
+            Console.WriteLine("Entra la nota del examen:");
+           
+            var nota = "";
+            bool primera = true;
+
+            ValidationResult<double> vrNote = Exam.ValidateNote(nota);
+            do
+            {
+                if (!primera) Console.WriteLine(vrNote.AllErrors);
+
+                nota = Console.ReadLine();
+                if (nota == "*") return false;
+                primera = false;
+            } while (!(vrNote = Exam.ValidateNote(nota)).IsSuccess);
+
+
+            Console.WriteLine("La fecha, por ahora, será el timeStamp de Now.");
+            DateTime date = DateTime.Now;
+            primera = true;
+
+            ValidationResult<DateTime> vrDate = Exam.ValidateDate(date);
+            do
+            {
+                if (!primera) Console.WriteLine(vrDate.AllErrors);
+
+                date = DateTime.Now;
+               // if (date == "*") return false;
+                primera = false;
+            } while (!(vrDate = Exam.ValidateDate(date)).IsSuccess);
+
+            Console.WriteLine("Entra el dni del alumno:");
+            primera = true;
+            var dni = "";
+            ValidationResult<Student> vrAlumno = Exam.ValidateStudent(dni,primera);
+  
+            do
+            {
+                if (!primera) Console.WriteLine(vrAlumno.AllErrors);
+
+                dni = Console.ReadLine();
+                if (dni == "*") return false;
+                primera = false;
+             } while (!(vrAlumno = Exam.ValidateStudent(dni, primera)).IsSuccess);
+           
+
+            Console.WriteLine("Entra el nombre de la Materia:");
+            var nameSubject = "";
+            primera = true;
+
+            ValidationResult<Subject> vrAsignatura = Exam.ValidateSubject(nameSubject, primera);
+            do
+            {
+                if (!primera) Console.WriteLine(vrAsignatura.AllErrors);
+
+                nameSubject = Console.ReadLine();
+                if (nameSubject == "*") return false;
+                primera = false;
+            } while (!(vrAsignatura = Exam.ValidateSubject(nameSubject, primera)).IsSuccess);
 
 
 
-        #endregion materias
+            if (vrNote.IsSuccess && vrDate.IsSuccess && vrAlumno.IsSuccess && vrAsignatura.IsSuccess)
+            {
+                Exam dummySubject = new 
+                    Exam(vrAlumno.ValidatedResult,
+                    vrAsignatura.ValidatedResult, vrDate.ValidatedResult,
+                    vrNote.ValidatedResult);
+
+                var sr =ExamRepository.Add(dummySubject);
+                if (sr.IsSuccess)
+                {
+
+                    Console.WriteLine($"examen guardado correctamente");
+                    return true;
+                }
+                else
+                {
+                    Console.WriteLine($"uno o más errores han ocurrido y el examen no se ha guardado correctamente");
+                }
+                return true;
+
+               
+            }
+            return false; ;
+        }
+      
+
+        #region Exámenes
 
 
+
+        #endregion Exámenes
 
         static void ShowAverage()
         {

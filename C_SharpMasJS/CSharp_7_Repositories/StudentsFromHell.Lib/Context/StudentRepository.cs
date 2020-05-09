@@ -45,10 +45,10 @@ namespace Academy.Lib.Context
             {
                 StudentsByDni[output.Entity.Dni] = output.Entity;
             }
-
+             
             return output;
         }
-
+         
         public override DeleteResult<Student> Delete(Student entity)
         {
             var output = new DeleteResult<Student>() { Entity = entity };

@@ -66,11 +66,7 @@ namespace Academy.Lib.Models
         }
         #endregion Validaciones de clase
 
-        public SaveResult<Subject> SaveSubject()
-        {
-            var saveResult = base.Save<Subject>();
-            return saveResult.Cast<Subject>();
-        }
+     
 
         public SaveResult<Subject> Save()
         {
