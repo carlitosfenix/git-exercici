@@ -86,5 +86,14 @@ namespace Academy.Lib.Context
         {
             return ExamByDniDate.Where(kvp => kvp.Key.Contains(""+dateTime)).Select(kvp => kvp);
         }
+
+        public void CalcularMaxMedMin()
+        {
+            double notaMedia = ExamByDniDate.Values.Average(x => x.Score);
+            Exam notaMin = ExamByDniDate.Values.Aggregate((i1, i2) => i1.Score < i2.Score ? i1 : i2);
+            Exam notaMax = ExamByDniDate.Values.Aggregate((i1, i2) => i1.Score > i2.Score ? i1 : i2);
+
+            Console.WriteLine($"Med: {notaMedia} Min: {notaMin.Score} Max: {notaMax.Score}");
+        }
     }
 }

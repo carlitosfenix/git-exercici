@@ -3,6 +3,8 @@ using Academy.Lib.Infrastructure;
 using Academy.Lib.Models;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
+using System.Globalization;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 
@@ -29,27 +31,46 @@ namespace ConsoleApp1
 
         private static void Presentacion()
         {
-            DatosdParaPruebas();
+            DatosParaPruebas();
             MenuPrincipal();
             ControlDeFlujoPrincipal();
         }
 
 
-        private static void DatosdParaPruebas()
+        private static void DatosParaPruebas()
         {
-            AlumnoAltaPruebas("44000041Y", "Antonio Raro Raro", "1");
+            AlumnoAltaPruebas("44000041Y", "Carlos Raro Raro", "1");
             AlumnoAltaPruebas("12345678Z", "Milano Reo Feo", "2");
+            AlumnoAltaPruebas("12345679S", "Pablo Marco Sando", "3");
             //Para verificar validations
             AlumnoAltaPruebas("44000041Y", "Antonio Raro Raro", "1");
             AlumnoAltaPruebas("44000041Z", "Antonio Raro Raro", "2");
-            /*
-            DbContext.RegistrarNewSubject("SQL", "Miguel Raro Palo");
-            DbContext.RegistrarNewSubject("GIT", "Andrés Raro Palo");
-            Student antonio = DbContext.SelectStudentByDNI("44000041Y");
-            Subject sql = DbContext.SelectSubjetByName("SQL");
-            DbContext.RegistrarNewExam(antonio, sql, DateTime.Now, 6.6);
-            DbContext.RegistrarNewExam(DbContext.SelectStudentByDNI("12345678Z"), DbContext.SelectSubjetByName("GIT"), DateTime.Now, 8.8);
-            DbContext.RegistrarNewExam(DbContext.SelectStudentByDNI("12345678Z"), DbContext.SelectSubjetByName("SQL"), DateTime.Now, 5.6);*/
+            //Materias
+            MateriaAltaPruebas("SQL", "Miguel Raro Palo");
+            MateriaAltaPruebas("GIT", "Andrés Laro Dano");
+            MateriaAltaPruebas("1-C#", "Jose Good Teacher");
+
+            //Exámenes
+            DateTime fechaPrimerTrimestreSQL = DateTime.ParseExact("2020-03-15 09:30:00", "yyyy-MM-dd HH:mm:ss", CultureInfo.InvariantCulture);
+            DateTime fechaPrimerTrimestreGIT = DateTime.ParseExact("2020-03-16 09:30:00", "yyyy-MM-dd HH:mm:ss", CultureInfo.InvariantCulture);
+            DateTime fechaPrimerTrimestre1C = DateTime.ParseExact("2020-03-17 09:30:00", "yyyy-MM-dd HH:mm:ss", CultureInfo.InvariantCulture);
+            DateTime fechaSegundoTrimestreSQL = DateTime.ParseExact("2020-06-10 09:30:00", "yyyy-MM-dd HH:mm:ss", CultureInfo.InvariantCulture);
+            DateTime fechaSegundoTrimestreGIT = DateTime.ParseExact("2020-06-11 09:30:00", "yyyy-MM-dd HH:mm:ss", CultureInfo.InvariantCulture);
+            DateTime fechaSegundoTrimestre1C = DateTime.ParseExact("2020-06-12 09:30:00", "yyyy-MM-dd HH:mm:ss", CultureInfo.InvariantCulture);
+            string formattedDate = fechaPrimerTrimestreSQL.ToString("yyyy-MM-dd HH:mm:ss");
+            Console.WriteLine(formattedDate);
+           
+            ExamenAltaPruebas("7,7", fechaPrimerTrimestreSQL,  "44000041Y", "SQL");
+            ExamenAltaPruebas("8,6", fechaPrimerTrimestreSQL,  "12345678Z", "SQL");
+            ExamenAltaPruebas("6,3", fechaPrimerTrimestreSQL,  "12345679S", "SQL");
+            ExamenAltaPruebas("5,7", fechaPrimerTrimestreGIT,  "44000041Y", "GIT");
+            ExamenAltaPruebas("5,7", fechaPrimerTrimestreGIT,  "12345678Z", "GIT");
+            ExamenAltaPruebas("5,7", fechaPrimerTrimestreGIT,  "12345679S", "GIT");
+            ExamenAltaPruebas("5,6", fechaPrimerTrimestre1C,   "12345678Z", "1-C#");
+
+            ExamenAltaPruebas("7,3", fechaSegundoTrimestreSQL, "12345679S", "SQL");
+            ExamenAltaPruebas("6,7", fechaSegundoTrimestreGIT, "44000041Y", "GIT");
+            ExamenAltaPruebas("8,3", fechaSegundoTrimestre1C,  "12345679S", "1-C#");
         }
 
         private static void MenuPrincipal()
@@ -98,7 +119,7 @@ namespace ConsoleApp1
                         MenuExamenes();
                         break;
                     case 's':
-                        //TODO: MenuEstadisticas();
+                        MenuEstadisticas();
                         break;
                     case 'q':
                         continuar = false;
@@ -107,7 +128,7 @@ namespace ConsoleApp1
             }
         }
 
-        #region Flujo y llamadas a SubjectRepository
+        #region Alumno Flujo y llamadas a SubjectRepository
         private static void MenuAlumnos()
         {
             OpcionActual = "a";
@@ -296,8 +317,22 @@ namespace ConsoleApp1
             var result = StudentRepository.GetStudentByDni(dni);
             if (result != null)
             {
+                Console.WriteLine(Separador);
                 Console.WriteLine($"- {result.Name} con DNI: {result.Dni} y silla {result.ChairNumber}");
-                //TODO: iterar examenes  
+           
+                IEnumerable<KeyValuePair<string,Exam>> examenes =ExamRepository.GetExamsByDni(result.Dni);
+                Console.WriteLine(Separador);
+                if (examenes.Count()>0)
+                {
+                    foreach (var item in examenes)
+                    {
+                        Console.WriteLine($"- El {item.Value.DateTimeExam}, en la materia de {item.Value.Subject.Name} obtuvo la nota de: {item.Value.Score} ");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Alumno sin examenes registrados por el momento");
+                }
             }
             else
             {
@@ -502,8 +537,9 @@ namespace ConsoleApp1
                 }
             }
         }
-
         #endregion Materias
+
+        #region Exámenes
         private static void MenuExamenes()
         {
             OpcionActual = "e";
@@ -574,6 +610,7 @@ namespace ConsoleApp1
 
         }
 
+       
         private static bool ExamenAlta()
         {
             LimpiarConsoleLine();
@@ -612,7 +649,7 @@ namespace ConsoleApp1
             Console.WriteLine("Entra el dni del alumno:");
             primera = true;
             var dni = "";
-            ValidationResult<Student> vrAlumno = Exam.ValidateStudent(dni,primera);
+            ValidationResult<Student> vrAlumno = Exam.ValidateStudent(dni,false);
   
             do
             {
@@ -621,7 +658,7 @@ namespace ConsoleApp1
                 dni = Console.ReadLine();
                 if (dni == "*") return false;
                 primera = false;
-             } while (!(vrAlumno = Exam.ValidateStudent(dni, primera)).IsSuccess);
+             } while (!(vrAlumno = Exam.ValidateStudent(dni, false)).IsSuccess);
            
 
             Console.WriteLine("Entra el nombre de la Materia:");
@@ -664,61 +701,24 @@ namespace ConsoleApp1
             }
             return false; ;
         }
-      
-
-        #region Exámenes
-
-
 
         #endregion Exámenes
 
-        static void ShowAverage()
-        {
-            //var avg =  Marks.Values
-            //                .SelectMany(x => x)
-            //                .Where(x => x > 3)
-            //                .Average();
 
-            var avg = 0.0;
-            Console.WriteLine($"La media actual es: {avg}");
-            Console.WriteLine();
+        #region Estadísticas
+        private static void MenuEstadisticas()
+        {
+            LimpiarConsoleLine();
+            Console.WriteLine(Separador);
+            Console.WriteLine("Las Estadisticas SON:");
+            Console.WriteLine(Separador);
+            ExamRepository.CalcularMaxMedMin();
         }
 
-        static void ShowMinimum()
-        {
-            Console.WriteLine("La nota más baja es: ");
-            Console.WriteLine();
-        }
+      
 
-        static void ShowMaximum()
-        {
-            Console.WriteLine("La nota más alta es: ");
-            Console.WriteLine();
-        }
 
-        public static void ClearCurrentConsoleLine()
-        {
-            int currentLineCursor = Console.CursorTop;
-            Console.SetCursorPosition(0, Console.CursorTop);
-            Console.Write(new string(' ', Console.WindowWidth));
-            Console.SetCursorPosition(0, currentLineCursor);
-        }
-
-        #region Formulas
-
-        public static double GetAverage()
-        {
-            var sum = 0.0;
-
-            //for (var i = 0; i < Marks.Count; i++)
-            //{
-            //    sum += Marks[i];
-            //}
-
-            //return sum / Marks.Count;
-            return sum;
-        }
-        #endregion Formulas
+        #endregion Estadísticas
 
 
 
@@ -787,7 +787,6 @@ namespace ConsoleApp1
             }
             return false;
         }
-
         private static ValidationResult<string> EntradaNombre(string mensajeNombre)
         {
             Console.WriteLine(mensajeNombre);
@@ -822,6 +821,95 @@ namespace ConsoleApp1
 
 
         #endregion auxialiares
+
+        #region test
+        private static bool MateriaAltaPruebas(string nameMateria, string nameTeacher)
+        {
+
+            ValidationResult<string> vrName;
+            if (!(vrName = Subject.ValidateName(nameMateria)).IsSuccess)
+            {
+                Console.WriteLine(vrName.AllErrors);
+            }
+
+            ValidationResult<string> vrTeacher;
+            if (!(vrTeacher = Subject.ValidateTeacher(nameTeacher)).IsSuccess)
+            {
+                Console.WriteLine(vrTeacher.AllErrors);
+            }
+            
+            var subject = new Subject
+            {
+                Name = nameMateria,
+                Teacher = nameTeacher
+            };
+
+            var sr2 = SubjectRepository.Add(subject);
+            if (sr2.IsSuccess && subject.Save().IsSuccess)
+            {
+                Console.WriteLine($"asignatura guardada correctamente");
+                return true;
+            }
+            else
+            {
+                Console.WriteLine($"uno o más errores han ocurrido y la asignatura no se ha guardado correctamente");
+            }
+            return false;
+        }
+        private static bool ExamenAltaPruebas(string nota, DateTime dateTime, string dni, string nameMateria)
+        {
+
+            ValidationResult<double> vrNote;
+            if (!(vrNote = Exam.ValidateNote(nota)).IsSuccess)
+            {
+                Console.WriteLine(vrNote.AllErrors);
+            }
+ 
+            ValidationResult<DateTime> vrDate;
+            if (!(vrDate = Exam.ValidateDate(dateTime)).IsSuccess)
+            {
+                Console.WriteLine(vrDate.AllErrors);
+            }
+
+            ValidationResult<Student> vrAlumno;
+            if (!(vrAlumno = Exam.ValidateStudent(dni, false)).IsSuccess)
+            {
+                    Console.WriteLine(vrAlumno.AllErrors);
+            }
+
+            ValidationResult < Subject > vrAsignatura;
+            if (!(vrAsignatura = Exam.ValidateSubject(nameMateria, false)).IsSuccess)
+            {
+                Console.WriteLine(vrAsignatura.AllErrors);
+            }
+
+            if (vrNote.IsSuccess && vrDate.IsSuccess && vrAlumno.IsSuccess && vrAsignatura.IsSuccess)
+            {
+                Exam dummySubject = new
+                    Exam(vrAlumno.ValidatedResult,
+                    vrAsignatura.ValidatedResult, vrDate.ValidatedResult,
+                    vrNote.ValidatedResult);
+
+                var sr = ExamRepository.Add(dummySubject);
+                if (sr.IsSuccess)
+                {
+
+                    Console.WriteLine($"examen guardado correctamente");
+                    return true;
+                }
+                else
+                {
+                    Console.WriteLine($"uno o más errores han ocurrido y el examen no se ha guardado correctamente");
+                }
+                return true;
+
+
+            }
+            return false; ;
+        }
+        #endregion test
+       
+       
     }
 
 }
