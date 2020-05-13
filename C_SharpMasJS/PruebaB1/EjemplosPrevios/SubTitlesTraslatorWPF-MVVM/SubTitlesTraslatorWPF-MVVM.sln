@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SubTitlesTraslatorWPF-MVVM", "SubTitlesTraslatorWPF-MVVM\SubTitlesTraslatorWPF-MVVM.csproj", "{438EF543-6170-489F-B133-6A5490299C74}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{438EF543-6170-489F-B133-6A5490299C74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{438EF543-6170-489F-B133-6A5490299C74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{438EF543-6170-489F-B133-6A5490299C74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{438EF543-6170-489F-B133-6A5490299C74}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {496D9AB1-1047-4A73-ACC8-78F501D2BAF4}
+	EndGlobalSection
+EndGlobal
