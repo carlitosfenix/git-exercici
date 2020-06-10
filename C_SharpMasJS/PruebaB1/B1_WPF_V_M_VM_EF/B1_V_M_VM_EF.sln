@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29920.165
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharp_7_DbContext_ValidationResults_Console", "CSharp_6_DbContext_Console\CSharp_7_DbContext_ValidationResults_Console.csproj", "{CC993A81-A0A5-4D96-A0BD-93513D2BEC41}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Academy.Lib", "Academy.Lib\Academy.Lib.csproj", "{13186717-43E6-4822-AAB3-2892128F0BE9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CC993A81-A0A5-4D96-A0BD-93513D2BEC41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC993A81-A0A5-4D96-A0BD-93513D2BEC41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC993A81-A0A5-4D96-A0BD-93513D2BEC41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC993A81-A0A5-4D96-A0BD-93513D2BEC41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13186717-43E6-4822-AAB3-2892128F0BE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13186717-43E6-4822-AAB3-2892128F0BE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13186717-43E6-4822-AAB3-2892128F0BE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13186717-43E6-4822-AAB3-2892128F0BE9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {52CA29D8-7578-4999-9EBE-19347740CB3E}
+	EndGlobalSection
+EndGlobal

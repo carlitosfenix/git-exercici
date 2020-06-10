@@ -4,9 +4,16 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SubTitlesTraslatorWPF_MVVM"
+        xmlns:uc="clr-namespace:SubTitlesTraslatorWPF_MVVM.Views"
+        
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="840" Width="1200">
     <Grid>
-
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition  Width="400"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <uc:ImportView x:Name="ImportView" Grid.Column="0" Margin="5" Loaded="ImportView_Loaded" ></uc:ImportView>
+        <uc:EditView x:Name="EditView" Grid.Column="1" Margin="5" ></uc:EditView>
     </Grid>
 </Window>

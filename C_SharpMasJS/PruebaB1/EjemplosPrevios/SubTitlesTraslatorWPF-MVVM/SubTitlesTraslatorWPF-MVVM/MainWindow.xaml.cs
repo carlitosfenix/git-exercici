@@ -1,17 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using SubTitlesTraslatorWPF_MVVM.Models;
+
+using System.Collections.ObjectModel;
+
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+
 
 namespace SubTitlesTraslatorWPF_MVVM
 {
@@ -23,6 +15,22 @@ namespace SubTitlesTraslatorWPF_MVVM
         public MainWindow()
         {
             InitializeComponent();
+
+            ImportView.ViewModel.SelectSubtilesForEditAction = (lines, language) =>
+            {
+                EditView.ViewModel.SelectImportLines(lines,language);//No necesitamos el ObservableCollection new ObservableCollection<SubtitleLine>(lines);
+            };
+        }
+
+        /// <summary>
+        /// Podemos crear métodos que se ejecuten al cargar la view
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ImportView_Loaded(object sender, RoutedEventArgs e)
+        {
+           //  < uc:ImportView x:Name = "ImportView" Grid.Column = "0" Margin = "5"
+           // Loaded = "ImportView_Loaded" ></ uc:ImportView >
         }
     }
 }
