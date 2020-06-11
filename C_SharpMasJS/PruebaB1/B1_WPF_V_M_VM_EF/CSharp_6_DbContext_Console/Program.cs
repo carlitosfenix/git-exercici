@@ -24,7 +24,8 @@ namespace CSharp_6_DbContext_Console
             
             //Instancia al REpositorio que se encarga de llamar gestionar la persistencia
             RepoDb = new AllRepositories();
-            DatosdParaPruebas();
+            //Por si volvemos a necesitar datos de pruebas en una Db Vacía
+            //DatosdParaPruebas();
             MenuPrincipal();
             ControlDeFlujoPrincipal();
         }
@@ -237,7 +238,7 @@ namespace CSharp_6_DbContext_Console
             LimpiarConsoleLine();
             Console.WriteLine("2 - 5) Listado de Alumnos.");
             var numItems = RepoDb.ListStudents();
-            if (numItems == 1)
+            if (numItems.Count<1)
             {
                 Console.WriteLine("");
                 Console.WriteLine("Todavía no hay registrado ningún alumno.");
@@ -344,7 +345,7 @@ namespace CSharp_6_DbContext_Console
             LimpiarConsoleLine();
             Console.WriteLine("3 - 3) Listado de Materias y Maestros.");
             var numItems = RepoDb.ListSubjets();
-            if (numItems == 1)
+            if (numItems.Count<1)
             {
                 Console.WriteLine("");
                 Console.WriteLine("Todavía no hay registrado ninguna Materia.");
@@ -489,14 +490,14 @@ namespace CSharp_6_DbContext_Console
             LimpiarConsoleLine();
             Console.WriteLine("4 - 3) Listado de Examenes.");
             var listado = RepoDb.ListExamsTodos();
-            if (listado.Equals(""))
+            if (listado.Count<1)
             {
                 Console.WriteLine("");
                 Console.WriteLine("Todavía no hay registrado ningún Examen.");
                 Console.WriteLine("¿Algo más del menú de Exámenes?, en caso contrario entra 'p' para ir al menú principal.");
                 return false;
             }
-            Console.WriteLine(listado);
+            
             return true;
         }
 

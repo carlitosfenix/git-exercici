@@ -12,11 +12,12 @@ namespace Academy.Lib.Context
 {
     public  class AllRepositories 
     {
-        static public bool TenemosAlumno = false;
-        static public bool TenemosMateria = false;
+        public bool TenemosAlumno = false;
+        public bool TenemosMateria = false;
+        public bool TenemosExams = false;
         public static string NewLine => "\r\n";
 
-        AcademyDbContext AcaDbContext = new AcademyDbContext();
+
 
         #region CRUDs Student
       
@@ -172,17 +173,19 @@ namespace Academy.Lib.Context
         /// <summary>
         /// Imprimime por consola los alumnos. Devuelve la cantidad de alumnos +1 (lo que 1 es = 0 alumnos)
         /// </summary>
-        public  int ListStudents()
+        public  List<Student> ListStudents()
         {
+            List<Student> tmpListStudents;
             using (AcademyDbContext context = new AcademyDbContext())
             {
+                tmpListStudents = context.ListaStudents.ToList();
                 int posicion = 1;
                 foreach (Student student in context.ListaStudents)
                 {
                     Console.WriteLine($"{posicion}-) {student.Name} con DNI: {student.Dni}");
                     posicion++;
                 }
-                return posicion;
+                return tmpListStudents;
             }
         }
         /// <summary>
@@ -317,18 +320,20 @@ namespace Academy.Lib.Context
             return txtBoxMateria;
         }
 
-        public int ListSubjets()
+        public List<Subject> ListSubjets()
         {
             int posicion = 1;
+            List<Subject> tmpListSubjects;
             using (AcademyDbContext context = new AcademyDbContext())
             {
+                tmpListSubjects = context.ListaSubjets.ToList();
                 foreach (Subject subjet in context.ListaSubjets)
                 {
                     Console.WriteLine($"{posicion}-) {subjet.Name} imparte: {subjet.Teacher}");
                     posicion++;
                 }
             }
-            return posicion;
+            return tmpListSubjects;
         }
 
         public Subject SelectSubjetByName(string name)
@@ -436,7 +441,7 @@ namespace Academy.Lib.Context
             return salida;
         }*/
 
-        public  string ListExamsTodos() 
+        public List<Exam> ListExamsTodos() 
         {
             var salida = "";
             int posicion = 1;
@@ -455,8 +460,10 @@ namespace Academy.Lib.Context
                     salida += $"{posicion}-) El día {exam.DateTimeExam} el alumno {student.Name} en la materia {subject.Name}, ha obtenido una nota de {exam.Score}. {NewLine}";
                     posicion++;
                 }
+                
             }
-                return salida;
+            Console.WriteLine(salida);
+            return TmpListExams;
         }
         
 

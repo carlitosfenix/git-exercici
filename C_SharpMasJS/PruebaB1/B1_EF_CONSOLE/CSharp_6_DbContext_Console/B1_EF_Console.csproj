@@ -4,8 +4,8 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     
-    <AssemblyName>CSharp_7_DbContext_ValidationsResult_Console</AssemblyName>
-    <RootNamespace>CSharp_7_DbContextt_ValidationsResult_Console</RootNamespace>
+    <AssemblyName>B1_EF_Console</AssemblyName>
+    <RootNamespace>B1_EF_Console</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
