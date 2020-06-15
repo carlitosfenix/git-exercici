@@ -15,6 +15,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
 namespace B1_WPF_MVC
 {
     /// <summary>
@@ -29,6 +30,8 @@ namespace B1_WPF_MVC
         public MainWindow()
         {
             InitializeComponent();
+            //
+            
 
             //Instancia al REpositorio que se encarga de llamar y gestionar la persistencia
             RepoDb = new AllRepositories();
@@ -38,7 +41,7 @@ namespace B1_WPF_MVC
 
         }
 
-
+        //TODO: revisar métodos VALIDAR
 
         #region Botones llamadas a CRUDS Student
         /**

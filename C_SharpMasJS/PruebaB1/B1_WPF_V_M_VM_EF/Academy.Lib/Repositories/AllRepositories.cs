@@ -55,6 +55,9 @@ namespace Academy.Lib.Context
                         Console.WriteLine($"Se ha producido un error con el SGBD con error code:{e.ErrorCode} y por el motivo: {e.Message}");
                         Console.WriteLine($"En caso de Unknown Database, Fíjate que la base de datos esté creada y que tengas acceso al server");
                         Console.WriteLine($"Si no está creada recuerda: desde consola de administración de paquetes: add-migration y add-database");
+                        System.Diagnostics.Debug.WriteLine($"Se ha producido un error con el SGBD con error code:{e.ErrorCode} y por el motivo: {e.Message}");
+                        System.Diagnostics.Debug.WriteLine($"En caso de Unknown Database, Fíjate que la base de datos esté creada y que tengas acceso al server");
+                        System.Diagnostics.Debug.WriteLine($"Si no está creada recuerda: desde consola de administración de paquetes: add-migration y add-database");
                     }
                 }
                 else
@@ -175,16 +178,30 @@ namespace Academy.Lib.Context
         /// </summary>
         public  List<Student> ListStudents()
         {
-            List<Student> tmpListStudents;
+            List<Student> tmpListStudents =null;
             using (AcademyDbContext context = new AcademyDbContext())
             {
-                tmpListStudents = context.ListaStudents.ToList();
-                int posicion = 1;
-                foreach (Student student in context.ListaStudents)
+                try
                 {
-                    Console.WriteLine($"{posicion}-) {student.Name} con DNI: {student.Dni}");
-                    posicion++;
+                    tmpListStudents = context.ListaStudents.ToList();
+                    int posicion = 1;
+                    foreach (Student student in context.ListaStudents)
+                    {
+                        Console.WriteLine($"{posicion}-) {student.Name} con DNI: {student.Dni}");
+                        posicion++;
+                    }
                 }
+                catch (System.InvalidOperationException e)
+                {
+                    Console.WriteLine($"Se ha producido un error al conectar con el SGBD con message: {e.Message}");
+                    Console.WriteLine($"Revisa la conexión y que esté levandada la base de datos.");
+                    Console.WriteLine($"Si tienes conexión pero no está creada, recuerda: desde consola de administración de paquetes: add-migration y add-database");
+                    System.Diagnostics.Debug.WriteLine($"Se ha producido un error al conectar con el SGBD con message: {e.Message}");
+                    System.Diagnostics.Debug.WriteLine($"En caso de Unknown Database, Fíjate que la base de datos esté creada y que tengas acceso al server");
+                    System.Diagnostics.Debug.WriteLine($"Si no está creada recuerda: desde consola de administración de paquetes: add-migration y add-database");
+
+                }
+              
                 return tmpListStudents;
             }
         }
