@@ -4,13 +4,7 @@ using System.Text;
 
 namespace GunsDependencyInyection.interfaces
 {
-    interface IGun
+    interface Interface1
     {
-        string Shoot();
-        string Model
-        {
-            set;
-            get;
-        }
     }
 }
